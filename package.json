@@ -8,7 +8,6 @@
     "build": "babel lib -d dist",
     "serve": "node dist/server.js",
     "test": "mocha --compilers js:babel-register"
-
   },
   "keywords": [
     "javascript",
@@ -21,7 +20,9 @@
   "license": "MIT",
   "dependencies": {
     "angular2": "^2.0.0-beta.17",
-    "express": "^4.13.4"
+    "express": "^4.13.4",
+    "materialize-css": "^0.97.6",
+    "pug": "^2.0.0-beta2"
   },
   "devDependencies": {
     "babel-cli": "^6.9.0",
@@ -31,7 +32,10 @@
     "babel-register": "^6.9.0",
     "babelify": "^7.3.0",
     "browserify": "^13.0.1",
+    "event-stream": "^3.3.2",
+    "glob": "^7.0.3",
     "gulp": "^3.9.1",
+    "gulp-browserify": "^0.5.1",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "mocha": "^2.5.3",
