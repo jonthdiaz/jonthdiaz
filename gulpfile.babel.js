@@ -10,8 +10,8 @@ import rename from 'gulp-rename';
 import glob from 'glob';
 import es from 'event-stream';
 const paths = {
-  sass: ['./src/sass/**/**/*.sass', './www/sass/**/**/*.scss'],
-  es6: './public/es6/**/**/*.js',
+  sass: ['./content/sass/**/**/*.sass', './content/sass/**/**/*.scss'],
+  es6: './content/es6/**/**/*.js',
 }
 
 gulp.task('build', (done)=>{
@@ -23,7 +23,7 @@ gulp.task('build', (done)=>{
         .transform(babel, {presets: ['es2015'], plugins:['syntax-async-functions', 'transform-regenerator']})
         .bundle()
         .on('error', (error)=>{ console.log(error); this.emit('end')})
-        .pipe(source(`${entry.replace('./public/es6/', "")}`))
+        .pipe(source(`${entry.replace('./content/es6/', "")}`))
         .pipe(rename({
           extname: '.bundle.js'
         }))
@@ -32,10 +32,19 @@ gulp.task('build', (done)=>{
     es.merge(tasks).on('end', done);
   })
 })
+gulp.task('sass', (done)=> {
+  gulp.src(paths.sass)
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./public/css/'))
+    .on('end', done);
+});
 gulp.task('watch', function() {
   gulp.watch(paths.es6, ['build']);
+  gulp.watch(paths.sass, ['sass']);
 });
 
 // gulp.task('watch', ()=>{return compile(true);})
 
-gulp.task('default', ['build'])
+gulp.task('default', ['watch'])
