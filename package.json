@@ -2,11 +2,12 @@
   "name": "jonthdiaz",
   "version": "0.1.0",
   "description": "Pagina",
-  "main": "server.js",
+  "main": "lib/index.js",
   "scripts": {
-    "start": "nodemon lib/server.js --exec babel-node",
+    "start-dev": "nodemon lib/server.js --exec babel-node",
     "build": "babel lib -d dist",
-    "serve": "node dist/server.js",
+    "start": "node lib/index.js",
+    "test1": "node dist/server.js",
     "test": "mocha --compilers js:babel-register",
     "watch": "gulp sass && gulp build && gulp watch"
   },
