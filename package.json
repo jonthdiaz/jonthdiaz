@@ -4,9 +4,8 @@
   "description": "Pagina",
   "main": "lib/index.js",
   "scripts": {
-    "start-dev": "nodemon lib/server.js --exec babel-node",
+    "start": "nodemon lib/server.js --exec babel-node",
     "build": "babel lib -d dist",
-    "start": "node lib/index.js",
     "test1": "node dist/server.js",
     "test": "mocha --compilers js:babel-register",
     "watch": "gulp sass && gulp build && gulp watch"
