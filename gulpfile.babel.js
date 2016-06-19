@@ -10,7 +10,9 @@ import rename from 'gulp-rename';
 import glob from 'glob';
 import es from 'event-stream';
 const paths = {
-  sass: ['./content/sass/**/**/*.sass', './content/sass/**/**/*.scss'],
+  sass: ['./content/sass/**/**/*.sass',
+         './content/sass/*.sass' ,
+         './content/sass/**/**/*.scss'],
   es6: './content/es6/**/**/*.js',
 }
 
@@ -46,6 +48,9 @@ gulp.task('watch', function() {
 });
 gulp.task('wes6', function() {
   gulp.watch(paths.es6, ['build']);
+});
+gulp.task('wsass', function() {
+  gulp.watch(paths.sass, ['sass']);
 });
 
 

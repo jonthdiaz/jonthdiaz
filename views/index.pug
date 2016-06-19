@@ -1,13 +1,47 @@
 html
   head
-    link(href='https://fonts.googleapis.com/css?family=Montserrat|Oleo+Script' rel='stylesheet' type='text/css')
+    link(href='https://fonts.googleapis.com/css?family=Material+Icons' rel='stylesheet' type='text/css')
     link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
     meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+    link(rel="stylesheet"  href="/css/layout.min.css")
     meta(charset='utf-8')
   body
-    h1 Primeros pasos con Angular2 (con Babel y Browserify)
-    div(ng-controller="HeaderController")
-    <hello-app>Cargando...</hello-app>
+    nav(class="white" role="navegation")
+      div(class="nav-wrapper container")
+        a(id="logo-container" href="#" class="brand-logo") LOGO
+        ul(class="right hide-on-med-and-down")
+          li
+            a(href="#") INICIO
+          li
+            a(href="#") SOBRE MI
+          li
+            a(href="#") BLOG
+          li
+            a(href="#") SERVICIOS
+        ul(id="nav-mobile" class="side-nav")
+          li
+            a(href="#") INICIO
+          li
+            a(href="#") SOBRE MI
+          li
+            a(href="#") BLOG
+          li
+            a(href="#") SERVICIOS
+        a(href="#" data-activates="nav-mobile" class="button-collapse")
+          i(class="material-icons")|menu
+    
+    div(id="index-banner" class="parallax-container")
+      div(class="section no-pad-bot")
+        div(class="container")
+          br
+          h1(class="header center teal-text text-lighten-2")
+            |Parallax template
+          div(class="row center")
+            h5(class="header col s12 light")
+              |A moder responsive front-end framework based on material design
+      div(class="parallax")
+        img(src="background1.jpg" alt="Unsplashed background img 1")
+            
     script(src='https://code.jquery.com/jquery-2.2.3.min.js', integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
     script(src='/js/index.bundle.js')
