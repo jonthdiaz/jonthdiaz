@@ -1,47 +1,127 @@
-html
-  head
-    link(href='https://fonts.googleapis.com/css?family=Material+Icons' rel='stylesheet' type='text/css')
-    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
-    link(rel="stylesheet"  href="/css/layout.min.css")
-    meta(charset='utf-8')
-  body
-    nav(class="white" role="navegation")
-      div(class="nav-wrapper container")
-        a(id="logo-container" href="#" class="brand-logo") LOGO
-        ul(class="right hide-on-med-and-down")
-          li
-            a(href="#") INICIO
-          li
-            a(href="#") SOBRE MI
-          li
-            a(href="#") BLOG
-          li
-            a(href="#") SERVICIOS
-        ul(id="nav-mobile" class="side-nav")
-          li
-            a(href="#") INICIO
-          li
-            a(href="#") SOBRE MI
-          li
-            a(href="#") BLOG
-          li
-            a(href="#") SERVICIOS
-        a(href="#" data-activates="nav-mobile" class="button-collapse")
-          i(class="material-icons")|menu
-    
-    div(id="index-banner" class="parallax-container")
-      div(class="section no-pad-bot")
-        div(class="container")
-          br
-          h1(class="header center teal-text text-lighten-2")
-            |Parallax template
-          div(class="row center")
-            h5(class="header col s12 light")
-              |A moder responsive front-end framework based on material design
-      div(class="parallax")
-        img(src="background1.jpg" alt="Unsplashed background img 1")
-            
+extends ./layout/index.pug
+block title
+  title Inicio
+block content
+  div(class="container")
+    div(class="section")
+      div(class="row")
+        div(class="col s12 center")
+          h3(class="teal-text text-darken-2  ")|JONATHAN DIAZ
+          p(class="center rem-2")
+            strong|Desarrollador web fullstack, Ingeniero en sistemas
+          img(src="imgs/photo.jpg" width="150px" class="circle responsive-img")
+          p(class="left-align light center")|Soy desarrollador web fullstack, trabajo con tecnologías como React.js, Angularjs, Nodejs, HTML5/CSS3, Backbone.js, Python y Django, .NET, llevo bastante tiempo en el mundo del emprendimiento trabajando en diferentes startups en las que he podido aprender mucho sobre creación de productos digitales, tengo experience en UX (experience de usuario) ya que he realizado varios cursos y los he aplicado a diferentes proyectos con muy buenos resultados.
+          p(class="left-align light center")|Me gusta estar actualizado con las  últimas tecnologías web y poder compartir conocimiento con la comunidad.
+  div(id="index-banner" class="parallax-container")
+    div(class="section no-pad-bot")
+      div(class="container")
+        br
+        h1(class="header center teal-text text-lighten-2")
+          |PROYECTOS RECIENTES
+        div(class="row center")
+          h5(class="header col s12 light")
+            |Tenemos los mejores servicios para lograr que tu empresa sea la numero uno en el mercado digital.
+        div(class="row center")
+          a(id="download-button" class="btn-large waves-effect waves-light teal lighten-1")|VER PROYECTOS
+    div(class="parallax")
+      img(src="background1.jpg" alt="Unsplashed background img 1")
+  
+  div(class="container")
+    div(class="section")
+      div(class="row")
+        h3(class="teal-text text-darken-2 center")|SERVICIOS
+        div(class="col s12 m6")
+          div(class="card")
+            div(class="card-image waves-effect waves-block waves-light")
+              img(src="imgs/planeacion.png" class="activator" height="212px")
+            div(class="card-content")
+              span(class="card-title activator grey-text text-darken-4")
+                strong|PLANEACIÓN
+                i(class="material-icons right wm-t-10")|more_vert
+            div(class="card-reveal")
+              span(class="card-title grey-text text-darken-4")
+                strong|PLANEACIÓN
+                i(class="material-icons right")|close
+              p|Su proyecto web debe llevar una planificación previa para que sus clientes se sientan a gusto y encuentren lo que buscan en su portal web.
+        div(class="col s12 m6")
+          div(class="card")
+            div(class="card-image waves-effect waves-block waves-light")
+              img(src="imgs/design.png" class="activator")
+            div(class="card-content")
+              span(class="card-title activator grey-text text-darken-4")
+                strong|DISEÑO
+                i(class="material-icons right wm-t-10")|more_vert
+            div(class="card-reveal")
+              span(class="card-title grey-text text-darken-4")
+                strong|DISEÑO
+                i(class="material-icons right")|close
+              p|Diseñamos sitios estéticos y funcionales manteniendonos a la vanguardia de las tendencias actuales.
+        div(class="col s12 m6")
+          div(class="card")
+            div(class="card-image waves-effect waves-block waves-light")
+              img(src="imgs/aplications.jpg" class="activator" height="288px")
+            div(class="card-content")
+              span(class="card-title activator grey-text text-darken-4")
+                strong|APLICACIONES WEB
+                i(class="material-icons right wm-t-10")|more_vert
+            div(class="card-reveal")
+              span(class="card-title grey-text text-darken-4")
+                strong|APLICACIONES WEB
+                i(class="material-icons right")|close
+              p|Creamos herramientas interactivas funcionales para navegadores web, así sus clientes pueden interactuar de una manera más sencilla y efectiva con su negocio.
+        div(class="col s12 m6")
+          div(class="card")
+            div(class="card-image waves-effect waves-block waves-light")
+              img(src="imgs/programmerday.jpg" class="activator")
+            div(class="card-content")
+              span(class="card-title activator grey-text text-darken-4")
+                strong|DESARROLLO
+                i(class="material-icons right wm-t-10")|more_vert
+            div(class="card-reveal")
+              span(class="card-title grey-text text-darken-4")
+                strong|DESARROLLO
+                i(class="material-icons right")|close
+              p|Su portal web esta respaldado por una codificación solida en lenguajes para la web asegurando un correcto funcionamiento de su portal o aplicación web..
+        div(class="col s12 m6")
+          div(class="card")
+            div(class="card-image waves-effect waves-block waves-light")
+              img(src="imgs/administration.png" class="activator")
+            div(class="card-content")
+              span(class="card-title activator grey-text text-darken-4")
+                strong|ADMINISTRACIÓN WEB
+                i(class="material-icons right wm-t-10")|more_vert
+            div(class="card-reveal")
+              span(class="card-title grey-text text-darken-4")
+                strong|ADMINISTRACIÓN WEB
+                i(class="material-icons right")|close
+              p|Ayudamos a nuestros clientes a mantener su portal  web actualizado con nuevas noticias y contenidos que su negocio genere.
+        
+  div(class="parallax-container valign-wrapper")
+    div(class="section no-pad-bot")
+      div(class="container")
+        div(class="row center")
+          h5(class="header col s12 light")|A modern responsive front-end framework based on material design
+    div(class="parallax")
+      img(src="background2.jpg" alt="Unsplashed background img 2")
+      
+  div(class="container")
+    div(class="section")
+      div(class="row")
+        div(class="col s12 center")
+          h3|Trabajemos juntos
+          p(class="left-align light rem2k vvv v")|Si estas interesado en iniciar un nuevo proyecto o si necesitas alguna consultoria tecnologica puedes contactarte conmigo.
+          
+  
+
+
+  div(class="parallax-container valign-wrapper")
+    div(class="section no-pad-bot")
+      div(class="row center")
+        h5(class="header col  s12 light")|A modern responsive front-end framework based on Material Design
+    div(class="parallax")
+      img(src="background3.jpg" alt="Unsplashed background img 3")
+      
+  block javascript
     script(src='https://code.jquery.com/jquery-2.2.3.min.js', integrity='sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=', crossorigin='anonymous')
     script(src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js')
     script(src='/js/index.bundle.js')

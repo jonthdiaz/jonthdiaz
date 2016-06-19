@@ -7,6 +7,14 @@
         margin-top: 0px + $i
       &-imp-#{$i}
         margin-top: 0px + $i !important
+  @media (max-width: 760px)
+    &-xs
+      &-t
+        @for $i from 0 through 100
+          &-#{$i}
+            margin-top: 0px + $i
+          &-imp-#{$i}
+            margin-top: 0px + $i !important
   &-b
     @for $i from 0 through 100
       &-#{$i}
@@ -173,3 +181,7 @@
 .wf
   &-right
     float: right
+
+.br
+  &-50
+    +border-radius(50%)
