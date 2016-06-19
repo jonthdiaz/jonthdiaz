@@ -44,6 +44,11 @@ gulp.task('watch', function() {
   gulp.watch(paths.es6, ['build']);
   gulp.watch(paths.sass, ['sass']);
 });
+gulp.task('wes6', function() {
+  gulp.watch(paths.es6, ['build']);
+});
+
+
 
 // gulp.task('watch', ()=>{return compile(true);})
 

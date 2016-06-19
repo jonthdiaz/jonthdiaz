@@ -1,7 +1,3 @@
 {
   "presets": ["es2015", "stage-2"],
-  "optional": ["es7.decorators"],
-  "plugins": [
-    "angular2-annotations"
-  ]
 }
