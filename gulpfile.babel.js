@@ -16,7 +16,7 @@ const paths = {
   sass: ['./content/sass/**/**/*.sass',
          './content/sass/*.sass' ,
          './content/sass/**/**/*.scss'],
-  es6: './content/es6/**/**/*.js',
+  es6: './content/js/**/**/*.js',
 }
 
 
@@ -28,11 +28,11 @@ let getJSWatcher = (bundler, entry) => {
       .on('error', (error) =>{
           gutil.log(error.toString())
        })
-      .pipe(source(`${entry.replace('./content/es6/', "")}`))
+      .pipe(source(`${entry.replace('./content/js/', "")}`))
       .pipe(rename({
         extname: '.bundle.js'
       }))
-      .pipe(gulp.dest('./public/js'))
+      .pipe(gulp.dest('./public/bundles'))
   }
 }
 

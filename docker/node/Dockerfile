@@ -1,0 +1,49 @@
+FROM jonthdiaz/base
+MAINTAINER jhonny <jonthdiaz@gmail.com>
+
+
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 4.4.7
+
+# workdir tutorya
+WORKDIR /app
+
+ADD setup_6.x /tmp/setup_6.x
+RUN bash /tmp/setup_6.x
+
+
+
+# mount volumen for tutorya folder
+#VOLUME /Users/tutorya/projects/tutoryaweb:/tutoryaweb
+
+
+RUN apt-get install -y build-essential
+RUN apt-get install -y nodejs
+
+RUN /usr/bin/npm install -g gulp
+
+
+
+
+# VOLUME ["/Users/tutorya/projects/tutoryaweb:/tutoryaweb:/tutoryaweb"]
+#CMD ["gulp", "watch"]
+#ADD package.json /tutoryaweb/package.json
+
+# Install nvm with node and npm
+#RUN curl https://raw.githubusercontent.com/creationix/nvm/v0.20.0/install.sh | bash \
+#    && . $NVM_DIR/nvm.sh \
+##    && nvm install $NODE_VERSION \
+#   && nvm alias default $NODE_VERSION \
+#    && nvm use default
+
+
+#ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+#ENV PATH      $NVM_DIR/v$NODE_VERSION/bin:$PATH
+
+
+# install gulp
+#RUN /usr/local/nvm/v4.4.7/bin/npm install -g gulp
+
+
+# install dependencies
+#RUN /usr/local/nvm/v4.4.7/bin/npm install

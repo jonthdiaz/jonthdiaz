@@ -1,0 +1,18 @@
+version: '2'
+services:
+  node:
+      restart: always
+      container_name: "node"
+      image: jonthdiaz/node:latest
+      command: npm start
+      ports:
+      -   "3000:3000"
+      volumes:
+      - ../:/app
+  gulp:
+      restart: always
+      container_name: "gulp"
+      image: jonthdiaz/node:latest
+      command: gulp watch
+      volumes:
+      - ../:/app

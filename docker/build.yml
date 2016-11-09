@@ -1,0 +1,11 @@
+version: '2'
+services:
+  base:
+    build: ./base
+    image: jonthdiaz/base:latest
+  node:
+      restart: always
+      build: ./node
+      image: jonthdiaz/node:latest
+      links:
+      -   base:base
