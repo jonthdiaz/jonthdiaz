@@ -4,8 +4,13 @@ services:
     build: ./base
     image: jonthdiaz/base:latest
   node:
-      restart: always
-      build: ./node
-      image: jonthdiaz/node:latest
-      links:
-      -   base:base
+    restart: always
+    build: ./node
+    image: jonthdiaz/node:latest
+    links:
+    -   base:base
+  rethinkdb:
+    build: ./rethinkdb
+    image: jonthdiaz/rethinkdb:latest
+    links:
+    -   base:base

@@ -22,7 +22,11 @@ RUN apt-get install -y nodejs
 
 RUN /usr/bin/npm install -g gulp
 
+ENV PORT 3000
+ENV NODE_ENV dev
+EXPOSE 3000
 
+CMD ["npm", "start"]
 
 
 # VOLUME ["/Users/tutorya/projects/tutoryaweb:/tutoryaweb:/tutoryaweb"]
