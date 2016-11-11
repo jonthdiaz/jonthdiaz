@@ -1,21 +1,23 @@
 import angular from 'angular'
-// import initjs from './layout/init'
-import controllers from '../es6/home/controllers'
 import ngRoute from 'angular-route'
+import controllers from '../es6/home/controllers'
+import dom from '../es6/home/dom'
+
 
 let app = angular.module('home', [
   'ngRoute',
-  controllers.name,
+  controllers.name
 ])
 .config(['$routeProvider', '$interpolateProvider', '$httpProvider',
 ($routeProvider, $interpolateProvider, $httpProvider)=>{
   $routeProvider
     .when('/', {
-      templateUrl: '/static/angular/objectives_calendar/views/main.html',
+      templateUrl: '/views/home/main.html',
       controller: 'mainController',
     })
     .otherwise({
       redirectTo: '/'
     })
+
 }])
 angular.bootstrap(document, [app.name])

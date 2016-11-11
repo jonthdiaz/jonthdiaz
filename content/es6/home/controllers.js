@@ -3,10 +3,11 @@ import { Inject } from 'angular-es6'
 
 let controllers = angular.module('home.controller', [])
 
-export  class mainController{
+export  class mainController extends Inject{
   static $inject = ['$scope'];
-  constructor(){
-    const { scope } = this.$inject
+  constructor(...args){
+    super(...args)
+    const { $scope } = this.$inject
   }
 }
 controllers.controller("mainController", mainController)
