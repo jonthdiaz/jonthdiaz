@@ -10,16 +10,24 @@ import rename from 'gulp-rename'
 import glob from 'glob'
 import es from 'event-stream'
 import gutil from 'gulp-util'
-
+import webpack from 'webpack-stream'
+import named from 'vinyl-named'
 
 const paths = {
   sass: ['./content/sass/**/**/*.sass',
          './content/sass/*.sass' ,
          './content/sass/**/**/*.scss'],
   es6: './content/js/**/**/*.js',
+  ts: ['./content/typescript/**/**/*.ts']
 }
 
+gulp.task(('w'),()=>{
+  gulp.src(paths.ts)
+    .pipe(named())
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(gulp.dest('./public/bundle/'))
 
+})
 
 let getJSWatcher = (bundler, entry) => {
   return function() {
