@@ -8,6 +8,8 @@
         "experimentalDecorators": true,
         "removeComments": false,
         "noImplicitAny": false,
+        "outDir": "public/bundle",
+
         "typeRoots": [
       "../node_modules/@types"
       ],

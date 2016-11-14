@@ -18,10 +18,10 @@ const paths = {
          './content/sass/*.sass' ,
          './content/sass/**/**/*.scss'],
   es6: './content/js/**/**/*.js',
-  ts: ['./content/typescript/**/**/*.ts']
+  ts: './content/ts/**/**/*.ts'
 }
 
-gulp.task(('w'),()=>{
+gulp.task(('build_ts'),()=>{
   gulp.src(paths.ts)
     .pipe(named())
     .pipe(webpack(require('./webpack.config.js')))

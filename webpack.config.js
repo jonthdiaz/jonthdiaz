@@ -8,10 +8,11 @@ devtool: 'source-map',
 resolve: {
   extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
 },
+watch: true,
 // Add minification
- plugins: [
-   new webpack.optimize.UglifyJsPlugin()
- ],
+ // plugins: [
+ //   new webpack.optimize.UglifyJsPlugin()
+ // ],
  module: {
      loaders: [
       // note that babel-loader is configured to run after ts-loader
