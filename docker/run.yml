@@ -34,5 +34,7 @@ services:
       container_name: "gulp"
       image: jonthdiaz/node:latest
       command: gulp watch
+      ports:
+        -   "35729:35729"
       volumes:
       - ../:/app

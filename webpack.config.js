@@ -1,4 +1,5 @@
 var webpack = require('webpack');
+var LiveReloadPlugin = require('webpack-livereload-plugin');
 module.exports = {
 output: {
     filename: '[name].bundle.js',
@@ -10,9 +11,10 @@ resolve: {
 },
 watch: true,
 // Add minification
- // plugins: [
- //   new webpack.optimize.UglifyJsPlugin()
- // ],
+ plugins: [
+  //  new webpack.optimize.UglifyJsPlugin()
+  new LiveReloadPlugin()
+ ],
  module: {
      loaders: [
       // note that babel-loader is configured to run after ts-loader
