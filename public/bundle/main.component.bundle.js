@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(20);
+	module.exports = __webpack_require__(30);
 
 
 /***/ },
@@ -10679,7 +10679,17 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 20 */
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */,
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10702,28 +10712,31 @@
 	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(2);
-	var MyComponent = function () {
-	    function MyComponent() {
-	        _classCallCheck(this, MyComponent);
-	
-	        alert("esto es una prueba jonathan otra de saludo");
+	var MainComponent = function () {
+	    function MainComponent() {
+	        _classCallCheck(this, MainComponent);
 	    }
 	
-	    _createClass(MyComponent, [{
-	        key: "sayMyName",
-	        value: function sayMyName() {
-	            console.log("My name is");
+	    _createClass(MainComponent, [{
+	        key: "ngAfterViewInit",
+	        value: function ngAfterViewInit() {
+	            $(document).ready(function () {
+	                setTimeout(function () {
+	                    $('.button-collapse').sideNav();
+	                    $('.parallax').parallax();
+	                }, 0);
+	            });
 	        }
 	    }]);
 	
-	    return MyComponent;
+	    return MainComponent;
 	}();
-	MyComponent = __decorate([core_1.Component({
-	    selector: 'my-app',
-	    template: '<div>Esto es un template  <button (click)="sayMyName()">say me name</button></div>'
-	}), __metadata('design:paramtypes', [])], MyComponent);
-	exports.MyComponent = MyComponent;
+	MainComponent = __decorate([core_1.Component({
+	    selector: 'main-app',
+	    template: "\n  <about></about>\n  <projects-component></projects-component>\n  <services-component></services-component>\n  "
+	}), __metadata('design:paramtypes', [])], MainComponent);
+	exports.MainComponent = MainComponent;
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=app.cp.bundle.map
+//# sourceMappingURL=main.component.bundle.map

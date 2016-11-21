@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(20);
+	module.exports = __webpack_require__(28);
 
 
 /***/ },
@@ -10679,12 +10679,18 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 20 */
+/* 20 */,
+/* 21 */,
+/* 22 */,
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
@@ -10702,28 +10708,15 @@
 	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(2);
-	var MyComponent = function () {
-	    function MyComponent() {
-	        _classCallCheck(this, MyComponent);
-	
-	        alert("esto es una prueba jonathan otra de saludo");
-	    }
-	
-	    _createClass(MyComponent, [{
-	        key: "sayMyName",
-	        value: function sayMyName() {
-	            console.log("My name is");
-	        }
-	    }]);
-	
-	    return MyComponent;
-	}();
-	MyComponent = __decorate([core_1.Component({
-	    selector: 'my-app',
-	    template: '<div>Esto es un template  <button (click)="sayMyName()">say me name</button></div>'
-	}), __metadata('design:paramtypes', [])], MyComponent);
-	exports.MyComponent = MyComponent;
+	var ProjectsComponent = function ProjectsComponent() {
+	    _classCallCheck(this, ProjectsComponent);
+	};
+	ProjectsComponent = __decorate([core_1.Component({
+	    selector: 'projects-component',
+	    templateUrl: './views/home/projects.html'
+	}), __metadata('design:paramtypes', [])], ProjectsComponent);
+	exports.ProjectsComponent = ProjectsComponent;
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=app.cp.bundle.map
+//# sourceMappingURL=projects.component.bundle.map

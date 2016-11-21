@@ -1,7 +1,7 @@
 import 'zone.js';
 import 'reflect-metadata';
 import { BrowserModule } from '@angular/platform-browser'
-import { Component, NgModule } from "@angular/core";
+import { Component, NgModule, AfterViewInit } from "@angular/core";
 
 import { MyComponent } from './app.cp'
 @NgModule({
@@ -10,4 +10,13 @@ import { MyComponent } from './app.cp'
     bootstrap: [MyComponent]
 })
 
-export class AppModule { }
+export class AppModule implements AfterViewInit{
+  ngAfterViewInit(): void{
+      $(document).ready(()=>{
+        setTimeout(function () {
+          (<any>$('.button-collapse')).sideNav();
+          (<any>$('.parallax')).parallax();
+        }, 0);
+      })
+  }
+}

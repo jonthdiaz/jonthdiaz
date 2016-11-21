@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(26);
+	module.exports = __webpack_require__(31);
 
 
 /***/ },
@@ -52,8 +52,6 @@
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
-	
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 	
 	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
 	
@@ -71,27 +69,14 @@
 	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(2);
-	var MyComponent = function () {
-	    function MyComponent() {
-	        _classCallCheck(this, MyComponent);
-	
-	        alert("esto es una prueba jonathan otra de saludo");
-	    }
-	
-	    _createClass(MyComponent, [{
-	        key: "sayMyName",
-	        value: function sayMyName() {
-	            console.log("My name is");
-	        }
-	    }]);
-	
-	    return MyComponent;
-	}();
-	MyComponent = __decorate([core_1.Component({
-	    selector: 'my-app',
-	    template: '<div>Esto es un template  <button (click)="sayMyName()">say me name</button></div>'
-	}), __metadata('design:paramtypes', [])], MyComponent);
-	exports.MyComponent = MyComponent;
+	var AboutComponent = function AboutComponent() {
+	    _classCallCheck(this, AboutComponent);
+	};
+	AboutComponent = __decorate([core_1.Component({
+	    selector: 'about',
+	    templateUrl: './views/home/about.html'
+	}), __metadata('design:paramtypes', [])], AboutComponent);
+	exports.AboutComponent = AboutComponent;
 
 /***/ },
 /* 2 */
@@ -10724,43 +10709,9 @@
 	//# sourceMappingURL=SubjectSubscription.js.map
 
 /***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	"use strict";
-	
-	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-	
-	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
-	    var c = arguments.length,
-	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
-	        d;
-	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
-	        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-	    }return c > 3 && r && Object.defineProperty(target, key, r), r;
-	};
-	var __metadata = undefined && undefined.__metadata || function (k, v) {
-	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-	};
-	__webpack_require__(21);
-	__webpack_require__(23);
-	var platform_browser_1 = __webpack_require__(24);
-	var core_1 = __webpack_require__(2);
-	var app_cp_1 = __webpack_require__(1);
-	var AppModule = function AppModule() {
-	    _classCallCheck(this, AppModule);
-	};
-	AppModule = __decorate([core_1.NgModule({
-	    imports: [platform_browser_1.BrowserModule],
-	    declarations: [app_cp_1.MyComponent],
-	    bootstrap: [app_cp_1.MyComponent]
-	}), __metadata('design:paramtypes', [])], AppModule);
-	exports.AppModule = AppModule;
-
-/***/ },
-/* 21 */
+/* 20 */,
+/* 21 */,
+/* 22 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global, process) {/**
@@ -12190,10 +12141,10 @@
 	
 	})));
 	
-	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(22)))
+	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }()), __webpack_require__(23)))
 
 /***/ },
-/* 22 */
+/* 23 */
 /***/ function(module, exports) {
 
 	// shim for using process in browser
@@ -12379,7 +12330,7 @@
 
 
 /***/ },
-/* 23 */
+/* 24 */
 /***/ function(module, exports) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/*! *****************************************************************************
@@ -13334,7 +13285,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 24 */
+/* 25 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -13343,7 +13294,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(25), __webpack_require__(2)) :
+	     true ? factory(exports, __webpack_require__(26), __webpack_require__(2)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/common', '@angular/core'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.platformBrowser = global.ng.platformBrowser || {}),global.ng.common,global.ng.core));
 	}(this, function (exports,_angular_common,_angular_core) { 'use strict';
@@ -16046,7 +15997,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 25 */
+/* 26 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -19075,17 +19026,167 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 26 */
+/* 27 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var platform_browser_dynamic_1 = __webpack_require__(27);
-	var app_md_1 = __webpack_require__(20);
-	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_md_1.AppModule);
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+	    var c = arguments.length,
+	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+	        d;
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+	        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = undefined && undefined.__metadata || function (k, v) {
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	__webpack_require__(22);
+	__webpack_require__(24);
+	var platform_browser_1 = __webpack_require__(25);
+	var about_component_1 = __webpack_require__(1);
+	var projects_component_1 = __webpack_require__(28);
+	var services_component_1 = __webpack_require__(29);
+	var main_component_1 = __webpack_require__(30);
+	var core_1 = __webpack_require__(2);
+	var AppModule = function AppModule() {
+	    _classCallCheck(this, AppModule);
+	};
+	AppModule = __decorate([core_1.NgModule({
+	    imports: [platform_browser_1.BrowserModule],
+	    declarations: [main_component_1.MainComponent, about_component_1.AboutComponent, projects_component_1.ProjectsComponent, services_component_1.ServicesComponent],
+	    bootstrap: [main_component_1.MainComponent]
+	}), __metadata('design:paramtypes', [])], AppModule);
+	exports.AppModule = AppModule;
 
 /***/ },
-/* 27 */
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+	    var c = arguments.length,
+	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+	        d;
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+	        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = undefined && undefined.__metadata || function (k, v) {
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(2);
+	var ProjectsComponent = function ProjectsComponent() {
+	    _classCallCheck(this, ProjectsComponent);
+	};
+	ProjectsComponent = __decorate([core_1.Component({
+	    selector: 'projects-component',
+	    templateUrl: './views/home/projects.html'
+	}), __metadata('design:paramtypes', [])], ProjectsComponent);
+	exports.ProjectsComponent = ProjectsComponent;
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+	    var c = arguments.length,
+	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+	        d;
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+	        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = undefined && undefined.__metadata || function (k, v) {
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(2);
+	var ServicesComponent = function ServicesComponent() {
+	    _classCallCheck(this, ServicesComponent);
+	};
+	ServicesComponent = __decorate([core_1.Component({
+	    selector: 'services-component',
+	    templateUrl: './views/home/services.html'
+	}), __metadata('design:paramtypes', [])], ServicesComponent);
+	exports.ServicesComponent = ServicesComponent;
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+	
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	var __decorate = undefined && undefined.__decorate || function (decorators, target, key, desc) {
+	    var c = arguments.length,
+	        r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc,
+	        d;
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);else for (var i = decorators.length - 1; i >= 0; i--) {
+	        if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    }return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = undefined && undefined.__metadata || function (k, v) {
+	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(2);
+	var MainComponent = function () {
+	    function MainComponent() {
+	        _classCallCheck(this, MainComponent);
+	    }
+	
+	    _createClass(MainComponent, [{
+	        key: "ngAfterViewInit",
+	        value: function ngAfterViewInit() {
+	            $(document).ready(function () {
+	                setTimeout(function () {
+	                    $('.button-collapse').sideNav();
+	                    $('.parallax').parallax();
+	                }, 0);
+	            });
+	        }
+	    }]);
+	
+	    return MainComponent;
+	}();
+	MainComponent = __decorate([core_1.Component({
+	    selector: 'main-app',
+	    template: "\n  <about></about>\n  <projects-component></projects-component>\n  <services-component></services-component>\n  "
+	}), __metadata('design:paramtypes', [])], MainComponent);
+	exports.MainComponent = MainComponent;
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	
+	var platform_browser_dynamic_1 = __webpack_require__(32);
+	var app_module_1 = __webpack_require__(27);
+	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
+
+/***/ },
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -19094,7 +19195,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(28), __webpack_require__(2), __webpack_require__(24)) :
+	     true ? factory(exports, __webpack_require__(33), __webpack_require__(2), __webpack_require__(25)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/compiler', '@angular/core', '@angular/platform-browser'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.platformBrowserDynamic = global.ng.platformBrowserDynamic || {}),global.ng.compiler,global.ng.core,global.ng.platformBrowser));
 	}(this, function (exports,_angular_compiler,_angular_core,_angular_platformBrowser) { 'use strict';
@@ -19254,7 +19355,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 28 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**
