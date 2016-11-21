@@ -14,3 +14,9 @@ services:
     image: jonthdiaz/rethinkdb:latest
     links:
     -   base:base
+
+  gulp:
+    build: ./gulp
+    image: jonthdiaz/gulp:latest
+    links:
+    -   base:base

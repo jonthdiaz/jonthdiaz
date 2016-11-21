@@ -32,8 +32,7 @@ services:
   gulp:
       restart: always
       container_name: "gulp"
-      image: jonthdiaz/node:latest
-      command: gulp watch
+      image: jonthdiaz/gulp:latest
       ports:
         -   "35729:35729"
       volumes:
