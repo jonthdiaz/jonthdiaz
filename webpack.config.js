@@ -13,7 +13,13 @@ watch: true,
 // Add minification
  plugins: [
   //  new webpack.optimize.UglifyJsPlugin()
-  new LiveReloadPlugin()
+  new LiveReloadPlugin(),
+  new webpack.ProvidePlugin({
+          $: "jquery",
+          jQuery: "jquery",
+          "window.jQuery": "jquery",
+          Hammer: "hammerjs/hammer"
+      })
  ],
  module: {
      loaders: [

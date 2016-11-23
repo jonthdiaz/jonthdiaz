@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(35);
+	module.exports = __webpack_require__(38);
 
 
 /***/ },
@@ -10694,7 +10694,10 @@
 /* 32 */,
 /* 33 */,
 /* 34 */,
-/* 35 */
+/* 35 */,
+/* 36 */,
+/* 37 */,
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -10715,15 +10718,15 @@
 	    if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 	};
 	var core_1 = __webpack_require__(2);
-	var ProjectsComponent = function ProjectsComponent() {
-	    _classCallCheck(this, ProjectsComponent);
+	var ProjectManagmentComponent = function ProjectManagmentComponent() {
+	    _classCallCheck(this, ProjectManagmentComponent);
 	};
-	ProjectsComponent = __decorate([core_1.Component({
-	    selector: 'projects-component',
-	    templateUrl: './views/home/projects.html'
-	}), __metadata('design:paramtypes', [])], ProjectsComponent);
-	exports.ProjectsComponent = ProjectsComponent;
+	ProjectManagmentComponent = __decorate([core_1.Component({
+	    selector: 'project-management',
+	    templateUrl: './views/home/project-management.html'
+	}), __metadata('design:paramtypes', [])], ProjectManagmentComponent);
+	exports.ProjectManagmentComponent = ProjectManagmentComponent;
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=projects.component.bundle.map
+//# sourceMappingURL=projectm.component.bundle.map
