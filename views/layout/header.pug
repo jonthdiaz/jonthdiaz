@@ -1,24 +1,29 @@
-nav(class="white" role="navegation")
-  div(class="nav-wrapper container")
-    a(id="logo-container" href="#" class="brand-logo wm-t-10 wm-xs-t-5")
-      img(src="imgs/logo.png")
-    ul(class="right hide-on-med-and-down fixed")
-      li
-        a(href="#home") INICIO
-      li
-        a(href="#projects") PROYECTOS
-      li
-        a(href="#services") SERVICIOS
+div(class="navbar-fixed")
+  nav(class="white" role="navegation")
+    div(class="nav-wrapper container navbar-fixed")
+      a(id="logo-container" href="#" class="brand-logo wm-t-10 wm-xs-t-5")
+        img(src="imgs/logo.png")
+      ul(class="right hide-on-med-and-down fixed")
         li
-          a(href="#project-manager") PROJECT MANAGER
-    ul(id="nav-mobile" class="side-nav")
-      li
-        a(href="#home" class="waves-effect") INICIO
-      li
-        a(href="#projects" class="waves-effect") PROYECTOS
-      li
-        a(href="#services" class="waves-effect") SERVICIOS
+          a(href="#home" class="waves-effect") INICIO
+        li
+          a(href="#projects" class="waves-effect") PROYECTOS
+        li
+          a(href="#services" class="waves-effect") SERVICIOS
         li
           a(href="#project-manager" class="waves-effect") PROJECT MANAGER
-    a(href="#" data-activates="nav-mobile" class="button-collapse" materialize="sidenav fixed")
-      i(class="material-icons")|menu
+          li
+            a(href="#contact" class="waves-effect") CONTACTO
+      ul(id="nav-mobile" class="side-nav")
+        li
+          a(href="#home" class="waves-effect") INICIO
+        li
+          a(href="#projects" class="waves-effect") PROYECTOS
+        li
+          a(href="#services" class="waves-effect") SERVICIOS
+        li
+          a(href="#project-manager" class="waves-effect") PROJECT MANAGER
+          li
+            a(href="#contact" class="waves-effect") CONTACTO
+      a(href="#" data-activates="nav-mobile" class="button-collapse" materialize="sidenav fixed")
+        i(class="material-icons")|menu
