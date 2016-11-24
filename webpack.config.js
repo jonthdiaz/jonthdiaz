@@ -14,12 +14,12 @@ watch: true,
  plugins: [
   //  new webpack.optimize.UglifyJsPlugin()
   new LiveReloadPlugin(),
-  new webpack.ProvidePlugin({
-          $: "jquery",
-          jQuery: "jquery",
-          "window.jQuery": "jquery",
-          Hammer: "hammerjs/hammer"
-      })
+  // new webpack.ProvidePlugin({
+  //         $: "jquery",
+  //         jQuery: "jquery",
+  //         "window.jQuery": "jquery",
+  //         Hammer: "hammerjs/hammer"
+  //     })
  ],
  module: {
      loaders: [

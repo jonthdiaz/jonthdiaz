@@ -1,8 +1,6 @@
 import 'zone.js';
 import 'reflect-metadata';
-import 'materialize-css';
-import "angular2-materialize";
-
+import 'angular2-materialize';
 import {MaterializeDirective} from "angular2-materialize";
 import {BrowserModule} from '@angular/platform-browser'
 import { AboutComponent } from './about.component'

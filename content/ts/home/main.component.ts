@@ -15,8 +15,9 @@ export class MainComponent implements AfterViewInit{
   ngAfterViewInit(): void{
     $(document).ready(()=>{
         setTimeout(function () {
-          // (<any>$('.button-collapse')).sideNav();
-          // (<any>$('.parallax')).parallax();
+          (<any>$('.button-collapse')).sideNav();
+          (<any>$('.parallax')).parallax();
+          (<any>$('.scrollspy')).scrollSpy();
         }, 0);
       })
   }

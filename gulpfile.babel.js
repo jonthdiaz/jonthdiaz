@@ -12,6 +12,7 @@ import es from 'event-stream'
 import gutil from 'gulp-util'
 import webpack from 'webpack-stream'
 import named from 'vinyl-named'
+import exec from 'gulp-exec'
 
 const paths = {
   sass: ['./content/sass/**/**/*.sass',

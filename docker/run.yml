@@ -19,7 +19,7 @@ services:
     command: echo Data Volume for db
 
 
-  node:
+  nodeserver:
       restart: always
       container_name: "node"
       image: jonthdiaz/node:latest
