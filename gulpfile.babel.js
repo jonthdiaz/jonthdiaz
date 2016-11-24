@@ -13,7 +13,9 @@ import gutil from 'gulp-util'
 import webpack from 'webpack-stream'
 import named from 'vinyl-named'
 import exec from 'gulp-exec'
+import ts from 'gulp-typescript'
 
+let ts_project = ts.createProject('tsconfig.client.json')
 const paths = {
   sass: ['./content/sass/**/**/*.sass',
          './content/sass/*.sass' ,

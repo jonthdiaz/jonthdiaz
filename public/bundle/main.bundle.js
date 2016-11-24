@@ -44,7 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(42);
+	module.exports = __webpack_require__(35);
 
 
 /***/ },
@@ -10733,13 +10733,13 @@
 	__webpack_require__(23);
 	__webpack_require__(24);
 	var angular2_materialize_1 = __webpack_require__(24);
-	var platform_browser_1 = __webpack_require__(36);
+	var platform_browser_1 = __webpack_require__(29);
 	var about_component_1 = __webpack_require__(1);
-	var projects_component_1 = __webpack_require__(37);
-	var services_component_1 = __webpack_require__(38);
-	var main_component_1 = __webpack_require__(39);
-	var projectm_component_1 = __webpack_require__(40);
-	var working_together_component_1 = __webpack_require__(41);
+	var projects_component_1 = __webpack_require__(30);
+	var services_component_1 = __webpack_require__(31);
+	var main_component_1 = __webpack_require__(32);
+	var projectm_component_1 = __webpack_require__(33);
+	var working_together_component_1 = __webpack_require__(34);
 	var core_1 = __webpack_require__(2);
 	var AppModule = function AppModule() {
 	    _classCallCheck(this, AppModule);
@@ -16654,14 +16654,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 29 */,
-/* 30 */,
-/* 31 */,
-/* 32 */,
-/* 33 */,
-/* 34 */,
-/* 35 */,
-/* 36 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -19373,7 +19366,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 37 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19404,7 +19397,7 @@
 	exports.ProjectsComponent = ProjectsComponent;
 
 /***/ },
-/* 38 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19435,7 +19428,7 @@
 	exports.ServicesComponent = ServicesComponent;
 
 /***/ },
-/* 39 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19485,7 +19478,7 @@
 	exports.MainComponent = MainComponent;
 
 /***/ },
-/* 40 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19516,7 +19509,7 @@
 	exports.ProjectManagmentComponent = ProjectManagmentComponent;
 
 /***/ },
-/* 41 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
@@ -19547,17 +19540,17 @@
 	exports.WorkingTogetherComponent = WorkingTogetherComponent;
 
 /***/ },
-/* 42 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";
 	
-	var platform_browser_dynamic_1 = __webpack_require__(43);
+	var platform_browser_dynamic_1 = __webpack_require__(36);
 	var app_module_1 = __webpack_require__(20);
 	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(app_module_1.AppModule);
 
 /***/ },
-/* 43 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(global) {/**
@@ -19566,7 +19559,7 @@
 	 * License: MIT
 	 */
 	(function (global, factory) {
-	     true ? factory(exports, __webpack_require__(44), __webpack_require__(2), __webpack_require__(36)) :
+	     true ? factory(exports, __webpack_require__(37), __webpack_require__(2), __webpack_require__(29)) :
 	    typeof define === 'function' && define.amd ? define(['exports', '@angular/compiler', '@angular/core', '@angular/platform-browser'], factory) :
 	    (factory((global.ng = global.ng || {}, global.ng.platformBrowserDynamic = global.ng.platformBrowserDynamic || {}),global.ng.compiler,global.ng.core,global.ng.platformBrowser));
 	}(this, function (exports,_angular_compiler,_angular_core,_angular_platformBrowser) { 'use strict';
@@ -19726,7 +19719,7 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, (function() { return this; }())))
 
 /***/ },
-/* 44 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/**

@@ -26,5 +26,9 @@ watch: true,
       // note that babel-loader is configured to run after ts-loader
       { test: /\.ts(x?)$/, loader: 'babel-loader!ts-loader' }
     ],
-   }
+  },
+  ts:{
+    configFileName: 'tsconfig.client.json'  
+  }
+
 }
