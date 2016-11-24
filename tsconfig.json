@@ -12,6 +12,7 @@
     "outDir": "build"
   },
   "typeRoots": [ "node_modules/@types" ],
+  "types": [],
   "compileOnSave": true,
   "exclude": [
     "node_modules",
