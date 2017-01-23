@@ -14,14 +14,17 @@ import webpack from 'webpack-stream'
 import named from 'vinyl-named'
 import exec from 'gulp-exec'
 import ts from 'gulp-typescript'
+import sourcemaps from 'gulp-sourcemaps'
 
 let ts_project = ts.createProject('tsconfig.client.json')
 const paths = {
-  sass: ['./content/sass/**/**/*.sass',
+  sass_all: ['./content/sass/**/**/*.sass',
          './content/sass/*.sass' ,
          './content/sass/**/**/*.scss'],
+ sass: ['./content/sass/**/**/*.sass',
+        './content/sass/*.sass'],
   es6: './content/js/**/**/*.js',
-  ts: './content/ts/**/**/*.ts'
+  ts: './content/ts/main.ts'
 }
 
 gulp.task(('build_ts'),()=>{
@@ -66,6 +69,16 @@ gulp.task('build', (done)=>{
 
 gulp.task('sass', (done)=> {
   gulp.src(paths.sass)
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .on('error', sass.logError)
+    .pipe(rename({ extname: '.min.css' }))
+    .pipe(gulp.dest('./public/css/'))
+    .pipe(sourcemaps.write('.'))
+    .on('end', done);
+});
+gulp.task('sass_all', (done)=> {
+  gulp.src(paths.sass_all)
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(rename({ extname: '.min.css' }))

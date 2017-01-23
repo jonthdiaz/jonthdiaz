@@ -13,7 +13,9 @@ watch: true,
 // Add minification
  plugins: [
   //  new webpack.optimize.UglifyJsPlugin()
-  new LiveReloadPlugin(),
+  new LiveReloadPlugin({
+    appendScriptTag: true
+  }),
   // new webpack.ProvidePlugin({
   //         $: "jquery",
   //         jQuery: "jquery",

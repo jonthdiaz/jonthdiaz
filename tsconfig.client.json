@@ -16,6 +16,7 @@
   "buildOnSave": false,
   "exclude": [
     "node_modules",
-    "backend"
+    "backend",
+    "lib"
   ]
 }
