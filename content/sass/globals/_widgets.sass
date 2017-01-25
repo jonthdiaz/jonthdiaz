@@ -48,6 +48,12 @@
       padding-bottom: 0px + $i
     &-l-#{$i}
       padding-left: 0px + $i
+
+.pr
+  @for $i from 0 through 100
+    @for $j from 0 through 100
+      &-#{$i}-#{$j}
+        padding: $i+rem $j+rem
 .ww
  	&-100
  		width: 100%

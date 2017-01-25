@@ -68,14 +68,14 @@ gulp.task('build', (done)=>{
 })
 
 gulp.task('sass', (done)=> {
-  gulp.src(paths.sass)
+  return gulp.src(paths.sass)
     .pipe(sourcemaps.init())
     .pipe(sass())
     .on('error', sass.logError)
     .pipe(rename({ extname: '.min.css' }))
-    .pipe(gulp.dest('./public/css/'))
     .pipe(sourcemaps.write('.'))
-    .on('end', done);
+    .pipe(gulp.dest('./public/css/'))
+    // .on('end', done);
 });
 gulp.task('sass_all', (done)=> {
   gulp.src(paths.sass_all)
