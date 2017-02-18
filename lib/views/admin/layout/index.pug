@@ -1,0 +1,18 @@
+html
+  head
+    link(href="favicon.png" rel="icon")
+    link(href='https://fonts.googleapis.com/css?family=Material+Icons' rel='stylesheet' type='text/css')
+    link(rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no')
+    link(rel="stylesheet"  href="/css/admin.min.css")
+    meta(charset='utf-8')
+    block title
+      title Default title
+
+  body(class="relative")
+    include ./header.pug
+    section(class="container relative wm-t-55 admin-main-wrapper")
+      include ./aside.pug
+      section(class="admin-content")
+        block content
+    block javascript

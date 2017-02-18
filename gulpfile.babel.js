@@ -95,6 +95,9 @@ gulp.task('wes6', function() {
 gulp.task('wsass', function() {
   gulp.watch(paths.sass, ['sass']);
 });
+gulp.task('dev', ['sass'],function() {
+  gulp.watch(paths.sass, ['sass']);
+});
 
 // gulp.task('watch', ()=>{return compile(true);})
 

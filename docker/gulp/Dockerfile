@@ -30,5 +30,6 @@ RUN /usr/bin/npm install -g typescript@next
 
 ENV PORT 35729
 EXPOSE 35729
+EXPOSE 3011
 
 CMD ["gulp", "watch"]

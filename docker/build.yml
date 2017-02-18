@@ -16,7 +16,9 @@ services:
     -   base:base
 
   gulp:
-    build: ./gulp
+    build:
+      context: ./gulp
+      dockerfile: Dockerfile
     image: jonthdiaz/gulp:latest
     links:
     -   base:base
