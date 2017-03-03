@@ -41474,6 +41474,15 @@ input[type=range]:focus::-ms-fill-upper {
 .right {
   float: right; }
 
+.block {
+  display: block; }
+
+.pointer {
+  cursor: pointer; }
+
+.wm-0-imp {
+  margin: 0px !important; }
+
 nav ul a, nav .brand-logo {
   color: #444; }
 

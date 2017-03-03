@@ -6,3 +6,27 @@ block content
   section(class="clearfix admin-content-section left")
     h4(class="center-align wm-t-20")
       | Listado de proyectos
+
+  section(class="list-proyects")
+    table(class="bordered highlight centered")
+      thead
+        tr
+          th Nombre
+          th Descripción
+          th Imagen
+          th Estado
+          th Editar
+          th Eliminar
+      tbody
+        each val in data
+          tr
+            td #{val.name}
+            td #{val.description}
+            td #{val.image}
+            td #{val.state}
+            td
+              a(class="")
+                | Editar
+            td
+              a(class="")
+                | Eliminar

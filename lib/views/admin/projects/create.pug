@@ -1,0 +1,28 @@
+extends ../layout/index.pug
+
+block title
+  title Projectos
+block content
+  section(class="clearfix admin-content-section left")
+    h4(class="center-align wm-t-20")
+      | Nuevo proyecto
+
+    section(class="wp-2")
+      form(action="/admin/proyectos/crear",method="post",enctype="multipart/form-data")
+        div(class="row wm-0-imp")
+          div(class="input-field col s12 wm-0")
+            input(name="Nombre", placeholder="Nombre", type="text")
+          div(class="input-field col s12 wm-0")
+            input(name="input-field col s12", placeholder="Descripción", type="text")
+          div(class="file-field input-field col s12 wm-0")
+            div(class="btn")
+              span Imagen
+              input(type="file")
+            div(class="file-path-wrapper")
+              input(class="file-path validate", type="text", placeholder="Subir imagen")
+          div(class="input-field  col s12 wm-0")
+            p
+              input(type="checkbox", placeholder="Estado", name="active", id="active", class="filled-in")
+              label(for="active") Activo
+          div(class="col s12 wm-t-30 right-align")
+            button(class="btn waves-effect waves-light", type="submit", name="action") Enviar

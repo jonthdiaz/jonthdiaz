@@ -25,11 +25,13 @@ RUN /usr/bin/npm install -g gulp
 RUN /usr/bin/npm install -g typescript
 RUN /usr/bin/npm install -g webpack
 RUN /usr/bin/npm install -g typings
+RUN /usr/bin/npm install -g node-inspector
+RUN /usr/bin/npm install -g forever
 
 
 ENV PORT 3000
 ENV NODE_ENV dev
-EXPOSE 3000 35729
+EXPOSE 3000 35729 5858
 
 CMD ["npm", "start"]
 

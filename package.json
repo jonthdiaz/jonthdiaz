@@ -4,7 +4,7 @@
   "description": "Pagina",
   "main": "lib/index.js",
   "scripts": {
-    "start": "nodemon lib/index.js --exec babel-node",
+    "start": "forever -w -c 'node --debug' lib/index.js --exec babel-node",
     "build": "babel lib -d dist",
     "test1": "node dist/server.js",
     "test": "mocha --compilers js:babel-register",

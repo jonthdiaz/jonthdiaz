@@ -19,12 +19,17 @@ services:
     command: echo Data Volume for db
 
 
-  nodeserver:
+  server:
       restart: always
+      build:
+        context: ./node
+        dockerfile: Dockerfile
       container_name: "node"
       image: jonthdiaz/node:latest
       ports:
       -   "3000:3000"
+      -   "5858:5858"
+      -   "8011:8011"
       volumes:
       - ../:/app
       depends_on:

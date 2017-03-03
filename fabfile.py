@@ -35,7 +35,7 @@ from fabric.context_managers import prefix
 # env.docker_host = "localhost"
 
 def server():
-    local('docker-compose -f ./docker/run.yml run --rm --service-ports nodeserver bash')
+    local('docker-compose -f ./docker/run.yml run --rm --service-ports server bash')
 
 def gulp():
     local('docker-compose -f ./docker/run.yml run --rm --service-ports gulp bash')
