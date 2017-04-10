@@ -31,7 +31,7 @@ RUN /usr/bin/npm install -g forever
 
 ENV PORT 3000
 ENV NODE_ENV dev
-EXPOSE 3000 35729 5858
+EXPOSE 3000 35729 5858 8011 9229
 
 CMD ["npm", "start"]
 
