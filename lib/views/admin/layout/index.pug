@@ -11,7 +11,8 @@ html
 
   body(class="relative")
     include ./header.pug
-    section(class="container relative wm-t-55 admin-main-wrapper")
+    section(class="container wm-t-55 admin-main-wrapper left",
+            style="width:100%")
       include ./aside.pug
       section(class="admin-content")
         block content

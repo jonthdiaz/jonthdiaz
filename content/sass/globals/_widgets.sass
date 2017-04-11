@@ -39,6 +39,7 @@
   @for $i from 0 through 100
     &-#{$i}
       margin: 0px + $i
+
 .wp
   @for $i from 0 through 100
     &-#{$i}
@@ -57,6 +58,34 @@
       padding-bottom: 0px + $i
     &-l-#{$i}
       padding-left: 0px + $i
+
+.br
+  @for $i from 0 through 100
+    &-#{$i}
+      border-radius: $i + px
+
+
+.rem
+  @for $i from 0 through 100
+    @for $j from 0 through 9
+      &-#{$i}-#{$j}
+        $size: $i + unquote('.') + $j + rem
+        font-size: $size
+      @media (max-width: 600px)
+        &-s-#{$i}-#{$j}
+          $size: $i + unquote('.') + $j + rem
+          font-size: $size
+
+.remp
+  @for $i from 0 through 100
+    @for $j from 0 through 9
+      &-#{$i}-#{$j}
+        $size: $i + unquote('.') + $j + rem
+        padding: $size
+      @media (max-width: 600px)
+        &-s-#{$i}-#{$j}
+          $size: $i + unquote('.') + $j + rem
+          padding: $size
 
 .pr
   @for $i from 0 through 100
@@ -192,6 +221,57 @@
     background-color: $SECOND_BUTTON
     &:hover
       color: white
+
+
+.wft
+  &-400
+    font-weight: 400
+  &-500
+    font-weight: 500
+  &-normal
+    font-weight: normal
+    &-imp
+      font-weight: normal !important
+  &-bold
+    font-weight: bold
+
+.top
+  @for $i from 0 through 100
+    &-#{$i}
+      top: 0px + $i
+    &-imp-#{$i}
+      top: 0px + $i !important
+    &-#{$i}-less
+      top: 0px - $i
+
+.left
+  @for $i from 0 through 500
+    &-#{$i}
+      left: 0px + $i
+    &-imp-#{$i}
+      left: 0px + $i !important
+    &-#{$i}-less
+      left: 0px - $i
+
+.right
+  @for $i from 0 through 500
+    &-#{$i}
+      right: 0px + $i
+    &-imp-#{$i}
+      right: 0px + $i !important
+    &-#{$i}-less
+      right: 0px - $i
+
+
+.bottom
+  @for $i from 0 through 500
+    &-#{$i}
+      bottom: 0px + $i
+    &-imp-#{$i}
+      bottom: 0px + $i !important
+    &-#{$i}-less
+      bottom: 0px - $i
+
 
 .wf
   &-right
