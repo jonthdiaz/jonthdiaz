@@ -3,30 +3,21 @@ extends ../layout/index.pug
 block title
   title Projectos
 block content
-  section(class="clearfix admin-content-section left")
-    h4(class="center-align wm-t-20")
-      | Listado de proyectos
-
-  section(class="list-proyects")
-    table(class="bordered highlight centered")
-      thead
-        tr
-          th Nombre
-          th Descripción
-          th Imagen
-          th Estado
-          th Editar
-          th Eliminar
-      tbody
-        each val in data
-          tr
-            td #{val.name}
-            td #{val.description}
-            td #{val.image}
-            td #{val.state}
-            td
-              a(class="")
-                | Editar
-            td
-              a(class="")
-                | Eliminar
+  section(class="list-proyects clearfix remp-1-0")
+    div.row.wm-0-imp
+      each val in data
+        div(class="col s12 m3 wp-px-5")
+          div(class="card blue-grey darken-1 wm-b-0 wm-t-0")
+            div(class="card-image wh-160")
+              img(src='/' + val.image, class="wh-160")
+              span(class="card-title uppercase")| #{val.name}
+            div(class="card-content white-text remp-imp-1-0")
+              p(class="truncate")| #{val.description} 
+            div(class="card-action remp-imp-1-0")
+              form(method="post", action="/admin/proyectos/delete",
+              onsubmit="return confirm('Do you really want to delete this record');",
+              name="form", id="form")
+                input(type="hidden", value=val.id, name="id")
+                a(href="/admin/proyectos/" + val.id)| EDIT
+                a(href="#", onclick="$(this).parent('form').submit()")| REMOVE
+                

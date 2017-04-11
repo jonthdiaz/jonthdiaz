@@ -27,9 +27,9 @@
   &-b
     @for $i from 0 through 100
       &-#{$i}
-        margin-top: 0px + $i
+        margin-bottom: 0px + $i
       &-imp-#{$i}
-        margin-top: 0px + $i !important
+        margin-bottom: 0px + $i !important
   &-r
     @for $i from 0 through 100
       &-#{$i}
@@ -82,6 +82,9 @@
       &-#{$i}-#{$j}
         $size: $i + unquote('.') + $j + rem
         padding: $size
+      &-imp-#{$i}-#{$j}
+        $size: $i + unquote('.') + $j + rem
+        padding: $size !important
       @media (max-width: 600px)
         &-s-#{$i}-#{$j}
           $size: $i + unquote('.') + $j + rem
@@ -262,6 +265,10 @@
     &-#{$i}-less
       right: 0px - $i
 
+.wh
+  @for $i from 0 through 500
+    &-#{$i}
+      height: 0px + $i
 
 .bottom
   @for $i from 0 through 500
@@ -285,6 +292,9 @@
   position: relative
 .absolute
   position: absolute
+
+.uppercase
+  text-transform: uppercase
 
 .left
   float: left
