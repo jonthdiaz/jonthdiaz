@@ -15,6 +15,8 @@ import named from 'vinyl-named'
 import exec from 'gulp-exec'
 import ts from 'gulp-typescript'
 import sourcemaps from 'gulp-sourcemaps'
+import vueify from  'vueify'
+
 
 let ts_project = ts.createProject('tsconfig.client.json')
 const paths = {
@@ -50,11 +52,11 @@ let getJSWatcher = (bundler, entry) => {
   }
 }
 
-gulp.task('build', (done)=>{
+gulp.task('build_js', (done)=>{
   glob(paths.es6,(error, files)=>{
     var tasks = files.map((entry)=>{
       let bundler = watchify(
-        browserify(entry, {debug:true, cache: {}, packageCache: {}, compact:true})).transform(babel)
+        browserify(entry, {debug:true, cache: {}, packageCache: {}, compact:true})).transform(babel).transform(vueify)
 
         let watchfn = getJSWatcher(bundler, entry)
         bundler.on('update', watchfn)
@@ -95,7 +97,7 @@ gulp.task('wes6', function() {
 gulp.task('wsass', function() {
   gulp.watch(paths.sass, ['sass']);
 });
-gulp.task('dev', ['sass'],function() {
+gulp.task('dev', ['sass', 'build_js'],function() {
   gulp.watch(paths.sass, ['sass']);
 });
 

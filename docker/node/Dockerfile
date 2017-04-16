@@ -27,7 +27,7 @@ RUN /usr/bin/npm install -g webpack
 RUN /usr/bin/npm install -g typings
 RUN /usr/bin/npm install -g node-inspector
 RUN /usr/bin/npm install -g forever
-
+RUN /usr/bin/npm install -g vue-cli
 
 ENV PORT 3000
 ENV NODE_ENV dev

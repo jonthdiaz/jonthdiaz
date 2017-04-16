@@ -1,0 +1,23 @@
+extends ../layout/index.pug
+
+block title
+  title Profile
+block content
+  section(class="list-proyects clearfix remp-1-0")
+    div.row.wm-0-imp
+      each val in data
+        div(class="col s12 m3 wp-px-5")
+          div(class="card blue-grey darken-1 wm-b-0 wm-t-0")
+            div(class="card-image wh-160")
+              img(src='/' + val.picture, class="wh-160")
+              span(class="card-title uppercase")| #{val.name}
+            div(class="card-content white-text remp-imp-1-0")
+              p(class="truncate")| #{val.description} 
+            div(class="card-action remp-imp-1-0")
+              form(method="post", action="/admin/profile/delete",
+              onsubmit="return confirm('Do you really want to delete this record');",
+              name="form", id="form")
+                input(type="hidden", value=val.id, name="id")
+                a(href="/admin/profile/" + val.id)| EDIT
+                a(href="#", onclick="$(this).parent('form').submit()")| REMOVE
+  

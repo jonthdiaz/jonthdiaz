@@ -4,24 +4,24 @@ block title
   title Projects
 block content
     section(class="wp-2")
-      form(action=project && '/admin/proyectos/update' || '/admin/proyectos/crear',
+      form(action=service && '/admin/services/update' || '/admin/services/crear',
            method='post',
            enctype="multipart/form-data")
-        if project
-          input(type="hidden", value=project.id, name="id")
+        if service
+          input(type="hidden", value=service.id, name="id")
         div(class="row wm-0-imp")
           div(class="input-field col s12 wm-0")
-            input(name="name", placeholder="Name", type="text", value=project && project.name)
+            input(name="name", placeholder="Name", type="text", value=service && service.name)
           div(class="input-field col s12 wm-0")
             textarea(name="description", placeholder="Description", class="materialize-textarea")
-              if project && project.description
-                |#{project.description}
+              if service && service.description
+                |#{service.description}
           div(class="input-field col s12 wm-0")
-            input(name="order", placeholder="Order", type="number" value=project && project.order)
+            input(name="order", placeholder="Order", type="number" value=service && service.order)
           div(class="input-field  col s12 wm-0")
             p
               input(type="checkbox", name="active", id="active", class="filled-in"
-                    checked=project && project.active == 'on')
+                    checked=service && service.active == 'on')
               label(for="active") Active
           div(class="file-field input-field col s12 wm-0 wm-t-imp-30")
             div(class="btn")
@@ -30,9 +30,9 @@ block content
             div(class="file-path-wrapper")
               input(class="file-path validate", type="text", placeholder="Upload image")
           
-          if project && project.image
+          if service && service.image
             div(class="col s12 mt-t-30") Current image |
-              a(href='/' + project.image, target="_blank")| image #{project.image}
+              a(href='/' + service.image, target="_blank")| image #{service.image}
             
           
           div(class="col s12 wm-t-30 right-align")
