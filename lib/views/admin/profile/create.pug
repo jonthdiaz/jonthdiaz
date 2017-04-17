@@ -11,6 +11,8 @@ block content
           input(type="hidden", value=profile.id, name="id")
         div(class="row wm-0-imp")
           div(class="input-field col s12 wm-0")
+            input(name="username", placeholder="username", type="text", value=profile && profile.username)
+          div(class="input-field col s12 wm-0")
             input(name="name", placeholder="Name", type="text", value=profile && profile.name)
           div(class="input-field col s12 wm-0")
             input(name="lastname", placeholder="Lastname", type="text", value=profile && profile.lastname)

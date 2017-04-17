@@ -3,10 +3,16 @@
       <div class="section">
         <div class="row">
           <div class="col s12 center">
-            <h3 class="teal-text text-darken-2">JONATHAN DIAZ</h3>
-            <p class="center rem-2"><strong>Desarrollador web fullstack, Ingeniero en sistemas</strong></p><img src="imgs/photo.jpg" width="150px" class="circle responsive-img">
-            <p class="left-align light center">Soy desarrollador web fullstack, trabajo con tecnologías como React.js, Angularjs, Nodejs, Backbone.js, Ionic, HTML5/CSS3, Python y Django, .NET, llevo bastante tiempo en el mundo del emprendimiento trabajando en diferentes startups en las que he podido aprender mucho sobre creación de productos digitales, tengo experience en UX (experience de usuario) ya que he realizado varios cursos y los he aplicado a diferentes proyectos con muy buenos resultados.</p>
-            <p class="left-align light center">Me gusta estar actualizado con las  últimas tecnologías web y poder compartir conocimiento con la comunidad.</p>
+            <h3 class="teal-text text-darken-2 uppercase">
+              {{profile.name}}  {{profile.lastname}}</h3>
+            <p class="center rem-2">
+              <strong >
+                {{profile.description}}
+              </strong></p>
+              <img :src="profile.picture" width="150px" class="circle responsive-img">
+            <p class="left-align light center"
+            v-html="profile.about_me">
+            </p>
           </div>
         </div>
       </div>
@@ -15,6 +21,7 @@
 
 <script>
 export default {
+  props: ['profile'],
 }
 </script>
 

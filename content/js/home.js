@@ -4,7 +4,7 @@
 // import dom from '../es6/home/dom'
 
 import Vue from 'vue'
-import App from './app.vue'
+import App from './appHome.vue'
 
 new Vue({
   el: '#app',

@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="">
-    <about></about>
-    <projects></projects>
-    <services></services>
+    <about  :profile="profile"></about>
+    <projects :projects="projects"></projects>
+    <services :services="services"></services>
     <project-management></project-management>
     <working-together></working-together>
   </div>
@@ -14,13 +14,19 @@ import projects from './home/projects.vue'
 import services from './home/services.vue'
 import projectManager from './home/project_manager.vue'
 import workingTogether from './home/working-together.vue'
+import _projects from './services/projects'
+import _services from './services/services'
+import _profile from './services/profiles'
 
 
 export default{
   data(){
-    return {
-      msg: 'Hello word!'
+    return{
+      projects: [],
+      services: [],
+      profile: {},
     }
+
   },
   components:{
     'about': about,
@@ -28,6 +34,17 @@ export default{
     'services': services,
     'project-management': projectManager,
     'working-together': workingTogether
+  },
+  created(){
+    _projects.getAll().then(resp=>{
+      this.projects = resp
+    })
+    _services.getAll().then(resp=>{
+      this.services =  resp
+    })
+    _profile.get().then(resp=>{
+      this.profile = resp
+    })
   },
   mounted(){
     $('.button-collapse').sideNav();
