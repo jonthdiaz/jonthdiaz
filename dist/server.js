@@ -34,6 +34,9 @@ var http = require('http').Server(app);
 var db = require('./models/db');
 
 var port = process.env.PORT || 3000;
+
+app.locals.env = process.env;
+
 var router = _express2.default.Router();
 
 var dbModel = new db();
