@@ -4,7 +4,7 @@
   "description": "Pagina",
   "main": "lib/index.js",
   "scripts": {
-    "start": "nodemon lib/index.js --exec babel-node",
+    "start": "node lib/index.js --exec babel-node",
     "dev": "forever -w -c 'node --debug-brk' lib/index.js --exec babel-node",
     "supervisor_dev": "supervisor --debug 'lib/index.js --exec babel-node'",
     "server": "nodemon --inspect  lib/index.js --exec babel-node",
