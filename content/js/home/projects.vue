@@ -23,8 +23,7 @@
                   <strong class="uppercase">
                   {{item.name}}</strong>
                   <i class="material-icons right">close</i></span>
-                  <p class="black-text">
-                    {{item.description}}
+                  <p class="black-text" v-html="item.description">
                   </p>
                 </div>
               </div>

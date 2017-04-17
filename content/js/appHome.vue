@@ -49,7 +49,9 @@ export default{
   mounted(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
-    $('.scrollspy').scrollSpy();
+    $('.scrollspy').scrollSpy({
+      scrollOffset:90
+    });
   }
 }
 </script>
