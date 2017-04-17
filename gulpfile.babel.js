@@ -16,6 +16,10 @@ import exec from 'gulp-exec'
 import ts from 'gulp-typescript'
 import sourcemaps from 'gulp-sourcemaps'
 import vueify from  'vueify'
+import pump from 'pump'
+import uglifyjs from 'uglify-js'
+var minifier = require('gulp-uglify/minifier');
+var envify = require('envify/custom');
 
 
 let ts_project = ts.createProject('tsconfig.client.json')
@@ -69,6 +73,58 @@ gulp.task('build_js', (done)=>{
   })
 })
 
+
+let getJSWatcherPRO = (bundler, entry) => {
+    return function() {
+        gutil.log('Begin build for', entry);
+        return bundler.bundle()
+            .on('error', (error) => {
+                gutil.log(error.toString())
+            })
+            .pipe(source(`${entry.replace('./content/js/', "")}`))
+            .pipe(rename({
+                extname: '.bundle.js'
+            }))
+            .pipe(gulp.dest('./public/build/bundle_js'))
+    }
+}
+
+gulp.task("prod_js", () => {
+    glob(paths.es6, (error, files) => {
+        var tasks = files.map((entry) => {
+            let bundler = browserify(entry)
+            .transform(babel)
+            .transform(vueify)
+            .transform({global:true}, envify({
+              NODE_ENV: 'production'
+            }))
+            let watchfn = getJSWatcherPRO(bundler, entry)
+            bundler.on('time', (time) => {
+                console.log(`End Bundling time ${time}`)
+            })
+
+            return watchfn()
+        })
+        return es.merge(tasks)
+    })
+})
+gulp.task('compress', function(cb) {
+    var options = {
+        preserveComments: 'license'
+    };
+    pump([
+            gulp.src('./public/build/bundle_js/**/*.js'),
+            minifier(options, uglifyjs),
+            gulp.dest('./public/build')
+        ],
+        cb
+    );
+});
+
+
+
+
+
 gulp.task('sass', (done)=> {
   return gulp.src(paths.sass)
     .pipe(sourcemaps.init())
@@ -104,3 +160,4 @@ gulp.task('dev', ['sass', 'build_js'],function() {
 // gulp.task('watch', ()=>{return compile(true);})
 
 gulp.task('default', ['watch'])
+gulp.task('prod', ['prod_js', 'compress'])
