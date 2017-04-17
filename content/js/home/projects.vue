@@ -1,0 +1,77 @@
+<template lang="html">
+  <div class="">
+
+
+  <div id="projects" class="scrollspy">
+      <div class="section no-pad-bot">
+        <div class="container"><br>
+          <h1 class="header center teal-text text-lighten-2">PROYECTOS RECIENTES</h1>
+          <!-- <div class="row center">
+            <h5 class="header col s12 light">Tenemos los mejores servicios para lograr que tu empresa sea la numero uno en el mercado digital.</h5>
+          </div> -->
+          <div class="row">
+          <div class="col s12 m6 l4 pr-0-1">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light"><img src="imgs/tutorya.png" class="activator"></div>
+              <div class="card-content"><span class="card-title activator grey-text text-darken-4"><strong>TUTORYA</strong><i class="material-icons right wm-t-10">more_vert</i></span></div>
+              <div class="card-reveal"><span class="card-title grey-text text-darken-4"><strong>TUTORYA</strong><i class="material-icons right">close</i></span>
+                <p class="black-text">Tutorya es una plataforma de educación en linea que permite a estudiantes de 9, 10 y 11 repasar para las pruebas de estado.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4 pr-0-1">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light"><img src="imgs/reto-saber-11.jpg" class="activator"></div>
+              <div class="card-content"><span class="card-title activator grey-text text-darken-4"><strong>RETO SABER 11</strong><i class="material-icons right wm-t-10">more_vert</i></span></div>
+              <div class="card-reveal"><span class="card-title grey-text text-darken-4"><strong>RETO SABER 11</strong><i class="material-icons right">close</i></span>
+                <p class="black-text">RETO SABER 11 es una aplicación de Tutorya para prepararte para el ICFES/ SABER 11. Podrás competir con otros estudiantes dentro y fuera de tu colegio respondiendo preguntas.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4 pr-0-1">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light"><img src="imgs/lsi.png" class="activator"></div>
+              <div class="card-content"><span class="card-title activator grey-text text-darken-4"><strong>LSI INGENIERIA</strong><i class="material-icons right wm-t-10">more_vert</i></span></div>
+              <div class="card-reveal"><span class="card-title grey-text text-darken-4"><strong>LSI INGENIERIA</strong><i class="material-icons right">close</i></span>
+                <p class="black-text">Empresa innovadora dedicada al desarrollo de plataformas tecnológicas apoyándonos en los mejores fabricantes internacionales y
+                  nacionales para crear productos con los mejores estándares de calidad.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4 pr-0-1">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light"><img src="imgs/kajuyali.png" class="activator"></div>
+              <div class="card-content"><span class="card-title activator grey-text text-darken-4"><strong>KAJUYALI</strong><i class="material-icons right wm-t-10">more_vert</i></span></div>
+              <div class="card-reveal"><span class="card-title grey-text text-darken-4"><strong>KAJUYALI</strong><i class="material-icons right">close</i></span>
+                <p class="black-text">Kajuyalí es una empresa que promueve el liderazgo a través de actividades de aventura y experiencias de vida. Trabaja con diferentes públicos y en varias presentaciones. Promovemos que sin importar su edad cada persona lidere su camino hacia una vida libre y feliz.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l4 pr-0-1">
+            <div class="card small">
+              <div class="card-image waves-effect waves-block waves-light"><img src="imgs/wind2share.png" class="activator"></div>
+              <div class="card-content"><span class="card-title activator grey-text text-darken-4"><strong>WIND2SHARE</strong><i class="material-icons right wm-t-10">more_vert</i></span></div>
+              <div class="card-reveal"><span class="card-title grey-text text-darken-4"><strong>WIND2SHARE</strong><i class="material-icons right">close</i></span>
+                <p class="black-text">Conéctese con personas y empresas de todo el mundo y participe en nuevas oportunidades de negocios y referidos. Comience a hacer una riqueza atravez de referidos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="row center wm-t-30"><a id="download-button" class="btn-large waves-effect waves-light teal lighten-1">VER PROYECTOS</a></div>
+        </div>
+      </div>
+      <!-- <div class="parallax"><img src="imgs/thing.jpg" alt="Unsplashed background img 1"></div> -->
+    </div>
+    <div class="divider wm-t-30">
+
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+}
+</script>
+
+<style lang="css">
+</style>

@@ -4,14 +4,14 @@
 // import dom from '../es6/home/dom'
 
 import Vue from 'vue'
-var App = require('./app.vue')
-
+import App from './app.vue'
 
 new Vue({
   el: '#app',
   render: function (createElement) {
-    return createElement(App)
-  }
+     return createElement(App)
+   },
+
 })
 
 
