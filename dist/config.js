@@ -5,10 +5,9 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var config = function config() {
   _classCallCheck(this, config);
 };
+// static host = "rdb"
 
 config.db_name = "app";
-config.host = "rdb";
+config.host = "dockhero-angular-71562.dockhero.io";
 config.port = 28015;
-
-
 module.exports = config;
