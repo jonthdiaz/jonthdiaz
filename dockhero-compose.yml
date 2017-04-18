@@ -1,0 +1,16 @@
+version: '2'
+
+services:
+  db:
+    image: rethinkdb
+    restart: "on-failure:10"
+    command: rethinkdb --bind all
+    ports:
+      - "28015:28015"
+      - "8080:8080"
+    volumes:
+      - rethink-data:/data
+
+volumes:
+  rethink-data:
+    driver: local
