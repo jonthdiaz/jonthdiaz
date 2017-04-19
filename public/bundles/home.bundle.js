@@ -90,7 +90,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-47294f2f", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-47294f2f", __vue__options__)
+    hotAPI.reload("data-v-47294f2f", __vue__options__)
   }
 })()}
 
@@ -240,7 +240,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   if (!module.hot.data) {
     hotAPI.createRecord("data-v-0427a046", __vue__options__)
   } else {
-    hotAPI.rerender("data-v-0427a046", __vue__options__)
+    hotAPI.reload("data-v-0427a046", __vue__options__)
   }
 })()}
 
