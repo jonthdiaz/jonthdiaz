@@ -5,8 +5,7 @@ block title
 block content
     section(class="wp-2")
       form(action=project && '/admin/proyectos/update' || '/admin/proyectos/crear',
-           method='post',
-           enctype="multipart/form-data")
+           method='post', enctype="multipart\/form-data")
         if project
           input(type="hidden", value=project.id, name="id")
         div(class="row wm-0-imp")
