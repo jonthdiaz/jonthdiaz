@@ -16,13 +16,27 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
+var _cloudinary = require('cloudinary');
+
+var _cloudinary2 = _interopRequireDefault(_cloudinary);
+
+var _config = require('../../config');
+
+var _config2 = _interopRequireDefault(_config);
+
+var _multerStorageCloudinary = require('multer-storage-cloudinary');
+
+var _multerStorageCloudinary2 = _interopRequireDefault(_multerStorageCloudinary);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var router = _express2.default.Router();
 
 
-var storage = _multer2.default.diskStorage({
-  destination: './uploads/services/',
+var storage = (0, _multerStorageCloudinary2.default)({
+  cloudinary: _cloudinary2.default,
+  folder: _config2.default.folder_cloudinary,
+  allowedFormats: ['jpg', 'png'],
   filename: function filename(req, file, cb) {
     cb(null, Date.now() + '-' + file.originalname); //Appending .jpg
   }
@@ -69,7 +83,7 @@ router.get('/:id', function (req, res) {
 router.post('/crear', upload.single('image'), function (req, res) {
   var resp = {};
   resp['menu_services_create'] = true;
-  if (req.file) req.body.image = req.file.path;
+  if (req.file) req.body.image = req.file.url;
   _services.create(req.body, function (error, response) {
     if (error) {
       resp['success'] = false;
@@ -85,7 +99,7 @@ router.post('/update', upload.single('image'), function (req, res) {
   var resp = {};
   resp['menu_services_create'] = true;
 
-  if (req.file) req.body.image = req.file.path;
+  if (req.file) req.body.image = req.file.url;
 
   _services.getById(req.body.id, function (error, result) {
     var data = req.body;

@@ -10,4 +10,5 @@ var config = function config() {
 config.db_name = "app";
 config.host = "dockhero-angular-71562.dockhero.io";
 config.port = 28015;
+config.folder_cloudinary = 'jonthdiaz';
 module.exports = config;

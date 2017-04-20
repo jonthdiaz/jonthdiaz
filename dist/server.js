@@ -24,11 +24,21 @@ var _cookieParser = require('cookie-parser');
 
 var _cookieParser2 = _interopRequireDefault(_cookieParser);
 
+var _cloudinary = require('cloudinary');
+
+var _cloudinary2 = _interopRequireDefault(_cloudinary);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
 
 app.use((0, _cookieParser2.default)());
+
+_cloudinary2.default.config({
+  cloud_name: 'jonthdiaz',
+  api_key: '248673179972386',
+  api_secret: '0fNaTfyEuMIuS2DRZZRwCR5Vdy0'
+});
 
 var http = require('http').Server(app);
 var db = require('./models/db');
