@@ -28,16 +28,23 @@ var _cloudinary = require('cloudinary');
 
 var _cloudinary2 = _interopRequireDefault(_cloudinary);
 
+var _sendinblueApi = require('sendinblue-api');
+
+var _sendinblueApi2 = _interopRequireDefault(_sendinblueApi);
+
+var _config = require('./config');
+
+var _config2 = _interopRequireDefault(_config);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var app = (0, _express2.default)();
 
 app.use((0, _cookieParser2.default)());
-
 _cloudinary2.default.config({
   cloud_name: 'jonthdiaz',
-  api_key: '248673179972386',
-  api_secret: '0fNaTfyEuMIuS2DRZZRwCR5Vdy0'
+  api_key: _config2.default.cloudinary_api_key,
+  api_secret: _config2.default.cloudinary_api_secret
 });
 
 var http = require('http').Server(app);

@@ -81,7 +81,7 @@ exports.default = {
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{},[_c('about',{attrs:{"profile":_vm.profile}}),_vm._v(" "),_c('projects',{attrs:{"projects":_vm.projects}}),_vm._v(" "),_c('services',{attrs:{"services":_vm.services}}),_vm._v(" "),_c('project-management'),_vm._v(" "),_c('working-together')],1)}
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"wm-b-70"},[_c('about',{attrs:{"profile":_vm.profile}}),_vm._v(" "),_c('projects',{attrs:{"projects":_vm.projects}}),_vm._v(" "),_c('services',{attrs:{"services":_vm.services}}),_vm._v(" "),_c('project-management'),_vm._v(" "),_c('working-together')],1)}
 __vue__options__.staticRenderFns = []
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
@@ -93,7 +93,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-47294f2f", __vue__options__)
   }
 })()}
-},{"./home/about_me.vue":3,"./home/project_manager.vue":4,"./home/projects.vue":5,"./home/services.vue":6,"./home/working-together.vue":7,"./services/profiles":8,"./services/projects":9,"./services/services":10,"vue":12,"vue-hot-reload-api":11}],2:[function(require,module,exports){
+},{"./home/about_me.vue":3,"./home/project_manager.vue":4,"./home/projects.vue":5,"./home/services.vue":6,"./home/working-together.vue":7,"./services/profiles":9,"./services/projects":10,"./services/services":11,"vue":13,"vue-hot-reload-api":12}],2:[function(require,module,exports){
 'use strict';
 
 var _vue = require('vue');
@@ -104,9 +104,13 @@ var _appHome = require('./appHome.vue');
 
 var _appHome2 = _interopRequireDefault(_appHome);
 
+var _vuelidate = require('vuelidate');
+
+var _vuelidate2 = _interopRequireDefault(_vuelidate);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import angular from 'angular'
+_vue2.default.use(_vuelidate2.default); // import angular from 'angular'
 // import ngRoute from 'angular-route'
 // import controllers from '../es6/home/controllers'
 // import dom from '../es6/home/dom'
@@ -137,7 +141,7 @@ new _vue2.default({
 // }])
 // angular.bootstrap(document, [app.name])
 
-},{"./appHome.vue":1,"vue":12}],3:[function(require,module,exports){
+},{"./appHome.vue":1,"vue":13,"vuelidate":14}],3:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -163,7 +167,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-18d59dee", __vue__options__)
   }
 })()}
-},{"vue":12,"vue-hot-reload-api":11}],4:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":12}],4:[function(require,module,exports){
 ;(function(){
 "use strict";
 
@@ -176,7 +180,7 @@ if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
 __vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{},[_c('div',{staticClass:"container scrollspy",attrs:{"id":"project-manager"}},[_c('div',{staticClass:"section"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12 center"},[_c('h3',{attrs:{"CLASS":"teal-text text-darken-2"}},[_vm._v("PROJECT MANAGEMENT")]),_vm._v(" "),_c('p',{staticClass:"center rem-2"},[_vm._v("Planeación, Ejecución, Seguimiento y Resultados.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("Para poder desarrollar un producto digital como lo es un portal web, un blog una aplicacion  movil, es necesario tener establecidos y claros los objetivos que se quieren cumplir y las métricas que se quieren alcanzar")]),_vm._v(" "),_c('p',{staticClass:"rem-1-5 left-align"},[_c('strong',[_vm._v("¿Cómo lo puedo ayudar con sus proyectos web?")])]),_vm._v(" "),_c('p',{staticClass:"left-align light "},[_vm._v("Si no sabe por donde empezar a desarrollar su proyecto, yo puedo darle una asesoría por donde debe comenzar, juntos lograremos un gran equipo y podras desarrollar tu idea.")]),_vm._v(" "),_c('p',{staticClass:"left-align light "},[_vm._v("1. Definicion del proyecto: En esta etapa se deben considerar los objetivos, el alcanza y el tiempo en el que el proyecto debe estar al aire.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("2. Análisis de requisitos: ¿Qué es lo que se necesita para desarrollar el proyecto? herramientas, software, plantillas, licencias, hostings, servidores etc. ")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("3. Diseño y prototipo: Se inicia con el wireframe del sitio web lo cual trae muchas preguntas de organización y presentación. También se revisan layouts y diseños.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("4. Construcción y Testing: Implementación del CMS que mejor se ajuste a las necesidades del sitio. Etapa de evaluación.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("5. Despliegue y Evaluación: Implementación de estrategias de social marketing, definición de métricas, objetivos y analítica.")])])])])]),_vm._v(" "),_c('div',{staticClass:"parallax-container valign-wrapper"},[_c('div',{staticClass:"section no-pad-bot"},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"row center"})])]),_vm._v(" "),_c('div',{staticClass:"parallax"},[_c('img',{attrs:{"src":"imgs/thing.jpg","alt":"Unsplashed background img 2"}})])])])}]
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{},[_c('div',{staticClass:"container scrollspy",attrs:{"id":"project-manager"}},[_c('div',{staticClass:"section"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12 center"},[_c('h3',{attrs:{"CLASS":"teal-text text-darken-2"}},[_vm._v("PROJECT MANAGEMENT")]),_vm._v(" "),_c('p',{staticClass:"center rem-2"},[_vm._v("Planeación, Ejecución, Seguimiento y Resultados.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("Para poder desarrollar un producto digital como lo es un portal web, un blog una aplicacion  movil, es necesario tener establecidos y claros los objetivos que se quieren cumplir y las métricas que se quieren alcanzar")]),_vm._v(" "),_c('p',{staticClass:"rem-1-5 left-align center-xs"},[_c('strong',[_vm._v("¿Cómo lo puedo ayudar con sus proyectos web?")])]),_vm._v(" "),_c('p',{staticClass:"left-align light "},[_vm._v("Si no sabe por donde empezar a desarrollar su proyecto, yo puedo darle una asesoría por donde debe comenzar, juntos lograremos un gran equipo y podras desarrollar tu idea.")]),_vm._v(" "),_c('p',{staticClass:"left-align light "},[_vm._v("1. Definicion del proyecto: En esta etapa se deben considerar los objetivos, el alcanza y el tiempo en el que el proyecto debe estar al aire.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("2. Análisis de requisitos: ¿Qué es lo que se necesita para desarrollar el proyecto? herramientas, software, plantillas, licencias, hostings, servidores etc. ")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("3. Diseño y prototipo: Se inicia con el wireframe del sitio web lo cual trae muchas preguntas de organización y presentación. También se revisan layouts y diseños.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("4. Construcción y Testing: Implementación del CMS que mejor se ajuste a las necesidades del sitio. Etapa de evaluación.")]),_vm._v(" "),_c('p',{staticClass:"left-align light"},[_vm._v("5. Despliegue y Evaluación: Implementación de estrategias de social marketing, definición de métricas, objetivos y analítica.")])])])])]),_vm._v(" "),_c('div',{staticClass:"parallax-container valign-wrapper"},[_c('div',{staticClass:"section no-pad-bot"},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"row center"})])]),_vm._v(" "),_c('div',{staticClass:"parallax"},[_c('img',{attrs:{"src":"imgs/thing.jpg","alt":"Unsplashed background img 2"}})])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -187,7 +191,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-99417c50", __vue__options__)
   }
 })()}
-},{"vue":12,"vue-hot-reload-api":11}],5:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":12}],5:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -213,7 +217,7 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-2076c9f9", __vue__options__)
   }
 })()}
-},{"vue":12,"vue-hot-reload-api":11}],6:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":12}],6:[function(require,module,exports){
 ;(function(){
 'use strict';
 
@@ -239,20 +243,90 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-0427a046", __vue__options__)
   }
 })()}
-},{"vue":12,"vue-hot-reload-api":11}],7:[function(require,module,exports){
+},{"vue":13,"vue-hot-reload-api":12}],7:[function(require,module,exports){
 ;(function(){
-"use strict";
+'use strict';
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = {};
+
+var _validators = require('vuelidate/lib/validators');
+
+var _forms = require('../services/forms');
+
+var _forms2 = _interopRequireDefault(_forms);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.default = {
+  data: function data() {
+    return {
+      name: '',
+      email: '',
+      comment: '',
+      phone: '',
+      success: false,
+      error: false
+    };
+  },
+
+  methods: {
+    formSubmit: function formSubmit(event) {
+      var _this = this;
+
+      var self = this;
+      if (this.$v.$invalid) {
+        this.$v.$touch();
+        return false;
+      }
+      _forms2.default.contactForm({
+        name: this.name,
+        email: this.email,
+        comment: this.comment,
+        phone: this.phone
+      }).then(function (resp) {
+        if (resp.error) {
+          _this.error = true;
+          return false;
+        }
+        _this.error = false;
+        self.name = "";
+        self.email = "";
+        self.comment = "";
+        self.phone = "";
+        self.$v.$reset();
+        _this.success = true;
+        setTimeout(function () {
+          _this.success = false;
+        }, 6000);
+      });
+    }
+  },
+  validations: {
+    name: {
+      required: _validators.required,
+      minLength: (0, _validators.minLength)(4)
+    },
+    email: {
+      required: _validators.required,
+      email: _validators.email
+    },
+    comment: {
+      required: _validators.required
+    },
+    phone: {
+      required: _validators.required,
+      numeric: _validators.numeric
+    }
+  }
+};
 })()
 if (module.exports.__esModule) module.exports = module.exports.default
 var __vue__options__ = (typeof module.exports === "function"? module.exports.options: module.exports)
 if (__vue__options__.functional) {console.error("[vueify] functional components are not supported and should be defined in plain js files using render functions.")}
-__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _vm._m(0)}
-__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{},[_c('div',{staticClass:"container"},[_c('div',{staticClass:"section"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12 center"},[_c('h3',[_vm._v("Trabajemos juntos")]),_vm._v(" "),_c('p',{staticClass:"left-align light rem-2 center"},[_vm._v("Si estas interesado en iniciar un nuevo proyecto o si necesitas alguna consultoria tecnologica puedes contactarte conmigo.")])])])])]),_vm._v(" "),_c('div',{staticClass:"container"},[_c('form',{staticClass:"col s12"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"input-field col s6 pr-0-1"},[_c('input',{staticClass:"validate",attrs:{"id":"name","type":"text"}}),_vm._v(" "),_c('label',{attrs:{"for":"name"}},[_vm._v("Nombre")])]),_vm._v(" "),_c('div',{staticClass:"input-field col s6 pr-0-1"},[_c('input',{staticClass:"validate",attrs:{"id":"email","type":"email"}}),_vm._v(" "),_c('label',{attrs:{"for":"email"}},[_vm._v("Email")])])]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"input-field col s12"},[_c('textarea',{staticClass:"materialize-textarea",attrs:{"id":"comment"}}),_vm._v(" "),_c('label',{attrs:{"for":"comment"}},[_vm._v("Comentarios")])])]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12"},[_c('button',{staticClass:"btn waves-effect waves-light",attrs:{"type":"submit","name":"action"}},[_vm._v("Enviar\n            "),_c('i',{staticClass:"material-icons right"},[_vm._v("send")])])])])])])])}]
+__vue__options__.render = function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{},[_vm._m(0),_vm._v(" "),_c('div',{staticClass:"container"},[_c('form',{staticClass:"col s12",attrs:{"method":"post","action":"/api/forms/contact","name":"formContact"},on:{"submit":function($event){$event.preventDefault();_vm.formSubmit($event)}},model:{value:(_vm.form),callback:function ($$v) {_vm.form=$$v},expression:"form"}},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"input-field col s12 m4 pr-0-1 wm-b-20"},[_c('input',{directives:[{name:"model",rawName:"v-model.trim",value:(_vm.name),expression:"name",modifiers:{"trim":true}}],staticClass:"validate wm-0-imp",attrs:{"type":"text"},domProps:{"value":(_vm.name)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.name=$event.target.value.trim()},function($event){_vm.$v.name.$touch()}],"blur":function($event){_vm.$forceUpdate()}}}),_vm._v(" "),_c('label',{attrs:{"for":"name"}},[_vm._v("Nombre ")]),_vm._v(" "),(_vm.$v.name.$error)?_c('p',{staticClass:"wm-0-imp rem-0-7 red-text"},[_vm._v("\n             Este campo es requerido\n           ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"input-field col s12 m4 pr-0-1 wm-b-20"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.email),expression:"email"}],staticClass:"validate wm-0-imp",attrs:{"id":"email","type":"email"},domProps:{"value":(_vm.email)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.email=$event.target.value},function($event){_vm.$v.email.$touch()}]}}),_vm._v(" "),_c('label',{attrs:{"for":"email"}},[_vm._v("Email")]),_vm._v(" "),(_vm.$v.email.$error)?_c('p',{staticClass:"wm-0-imp rem-0-7 red-text"},[_vm._v("\n             Email invalido\n           ")]):_vm._e()]),_vm._v(" "),_c('div',{staticClass:"input-field col s12 m4 pr-0-1 wm-b-20"},[_c('input',{directives:[{name:"model",rawName:"v-model",value:(_vm.phone),expression:"phone"}],staticClass:"validate wm-0-imp",attrs:{"id":"phone","type":"text"},domProps:{"value":(_vm.phone)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.phone=$event.target.value},function($event){_vm.$v.phone.$touch()}]}}),_vm._v(" "),_c('label',{attrs:{"for":"phone"}},[_vm._v("Teléfono")]),_vm._v(" "),(_vm.$v.phone.$error)?_c('p',{staticClass:"wm-0-imp rem-0-7 red-text"},[_vm._v("\n             Teléfono invalido\n           ")]):_vm._e()])]),_vm._v(" "),_c('div',{staticClass:"row"},[_c('div',{staticClass:"input-field col s12 wm-b-20 wp-l-imp-10"},[_c('textarea',{directives:[{name:"model",rawName:"v-model",value:(_vm.comment),expression:"comment"}],staticClass:"materialize-textarea wm-0-imp",attrs:{"id":"comment"},domProps:{"value":(_vm.comment)},on:{"input":[function($event){if($event.target.composing){ return; }_vm.comment=$event.target.value},function($event){_vm.$v.comment.$touch()}]}}),_vm._v(" "),_c('label',{attrs:{"for":"comment"}},[_vm._v("Comentarios")]),_vm._v(" "),(_vm.$v.comment.$error)?_c('p',{staticClass:"wm-0-imp rem-0-7 red-text"},[_vm._v("\n              Este campo es requerido\n            ")]):_vm._e()])]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.success),expression:"success"}],staticClass:"row"},[_vm._m(1)]),_vm._v(" "),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.error),expression:"error"}],staticClass:"row"},[_vm._m(2)]),_vm._v(" "),_vm._m(3)])])])}
+__vue__options__.staticRenderFns = [function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_c('div',{staticClass:"section"},[_c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12 center"},[_c('h3',[_vm._v("Trabajemos juntos")]),_vm._v(" "),_c('p',{staticClass:"left-align light rem-2 center"},[_vm._v("Si estas interesado en iniciar un nuevo proyecto o si necesitas alguna consultoria tecnologica puedes contactarte conmigo.")])])])])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col s12 center"},[_c('div',{staticClass:"green-text rem-1-3"},[_vm._v("\n             Se envio tu información correctamente, pronto me comunicare contigo.\n           ")])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"col s12 center"},[_c('div',{staticClass:"red-text rem-1-6"},[_vm._v("\n             Se genero un error intenta nuevamente o enviame un correo.\n           ")])])},function render () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"row"},[_c('div',{staticClass:"col s12 wm-t-10 center-xs"},[_c('button',{staticClass:"btn waves-effect waves-light rem-1-0 wmp-xs-90 wh-40",attrs:{"type":"submit","name":"action"}},[_vm._v("\n             Enviar\n          ")])])])}]
 if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
@@ -263,7 +337,29 @@ if (module.hot) {(function () {  var hotAPI = require("vue-hot-reload-api")
     hotAPI.reload("data-v-682e2dd5", __vue__options__)
   }
 })()}
-},{"vue":12,"vue-hot-reload-api":11}],8:[function(require,module,exports){
+},{"../services/forms":8,"vue":13,"vue-hot-reload-api":12,"vuelidate/lib/validators":22}],8:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = {
+  contactForm: function contactForm(data) {
+    return fetch('/api/forms/contact', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    }).then(function (response) {
+      return response.ok ? response.json() : response.json().then(function (err) {
+        return { 'error': err };
+      });
+    });
+  }
+};
+
+},{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -279,7 +375,7 @@ exports.default = {
   }
 };
 
-},{}],9:[function(require,module,exports){
+},{}],10:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -295,7 +391,7 @@ exports.default = {
   }
 };
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
@@ -311,7 +407,7 @@ exports.default = {
   }
 };
 
-},{}],11:[function(require,module,exports){
+},{}],12:[function(require,module,exports){
 var Vue // late bind
 var version
 var map = window.__VUE_HOT_MAP__ = Object.create(null)
@@ -449,7 +545,7 @@ exports.reload = tryWrap(function (id, options) {
   })
 })
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 (function (global){
 /*!
  * Vue.js v2.2.6
@@ -7283,5 +7379,980 @@ setTimeout(function () {
 
 module.exports = Vue$2;
 
+}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],14:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.withParams = exports.validationMixin = exports.Vuelidate = undefined;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _params = require('./params');
+
+var buildFromKeys = function buildFromKeys(keys, fn, keyFn) {
+  return keys.reduce(function (build, key) {
+    build[keyFn ? keyFn(key) : key] = fn(key);
+    return build;
+  }, {});
+};
+
+function isPromise(object) {
+  return (typeof object === 'object' || typeof object === 'function') && typeof object.then === 'function';
+}
+
+var getPath = function getPath(ctx, obj, path, fallback) {
+  if (typeof path === 'function') {
+    return path.call(ctx, obj, fallback);
+  }
+
+  path = Array.isArray(path) ? path : path.split('.');
+  for (var i = 0; i < path.length; i++) {
+    if (obj && typeof obj === 'object') {
+      obj = obj[path[i]];
+    } else {
+      return fallback;
+    }
+  }
+
+  return typeof obj === 'undefined' ? fallback : obj;
+};
+
+function makePendingAsyncVm(Vue, promise) {
+  var asyncVm = new Vue({
+    data: {
+      pending: true,
+      value: false
+    }
+  });
+
+  promise.then(function (value) {
+    asyncVm.pending = false;
+    asyncVm.value = value;
+  }, function (error) {
+    asyncVm.pending = false;
+    asyncVm.value = false;
+    throw error;
+  });
+
+  asyncVm.__isVuelidateAsyncVm = true;
+  return asyncVm;
+}
+
+var validationGetters = {
+  $invalid: function $invalid() {
+    var proxy = this.proxy;
+    return this.nestedKeys.some(function (nested) {
+      return proxy[nested].$invalid;
+    }) || this.ruleKeys.some(function (rule) {
+      return !proxy[rule];
+    });
+  },
+  $dirty: function $dirty() {
+    if (this.dirty) {
+      return true;
+    }
+    if (this.nestedKeys.length === 0) {
+      return false;
+    }
+
+    var proxy = this.proxy;
+    return this.nestedKeys.every(function (key) {
+      return proxy[key].$dirty;
+    });
+  },
+  $error: function $error() {
+    return this.$dirty && !this.$pending && this.$invalid;
+  },
+  $pending: function $pending() {
+    var _this = this;
+
+    var proxy = this.proxy;
+    return this.nestedKeys.some(function (key) {
+      return proxy[key].$pending;
+    }) || this.ruleKeys.some(function (key) {
+      return _this.getRef(key).$pending;
+    });
+  },
+  $params: function $params() {
+    var _this2 = this;
+
+    var vals = this.validations;
+    return _extends({}, buildFromKeys(this.nestedKeys, function (key) {
+      return vals[key] && vals[key].$params || null;
+    }), buildFromKeys(this.ruleKeys, function (key) {
+      return _this2.getRef(key).$params;
+    }));
+  }
+};
+
+function setDirtyRecursive(newState) {
+  this.dirty = newState;
+  var proxy = this.proxy;
+  var method = newState ? '$touch' : '$reset';
+  this.nestedKeys.forEach(function (key) {
+    proxy[key][method]();
+  });
+}
+
+var validationMethods = {
+  $touch: function $touch() {
+    setDirtyRecursive.call(this, true);
+  },
+  $reset: function $reset() {
+    setDirtyRecursive.call(this, false);
+  },
+  $flattenParams: function $flattenParams() {
+    var proxy = this.proxy;
+    var params = [];
+    for (var key in this.$params) {
+      if (this.isNested(key)) {
+        var childParams = proxy[key].$flattenParams();
+        for (var j = 0; j < childParams.length; j++) {
+          childParams[j].path.unshift(key);
+        }
+        params = params.concat(childParams);
+      } else {
+        params.push({ path: [], name: key, params: this.$params[key] });
+      }
+    }
+    return params;
+  }
+};
+
+var getterNames = Object.keys(validationGetters);
+var methodNames = Object.keys(validationMethods);
+
+var _cachedComponent = null;
+var getComponent = function getComponent(Vue) {
+  if (_cachedComponent) {
+    return _cachedComponent;
+  }
+
+  var ValidationRule = Vue.extend({
+    props: ['rule', 'model', 'parentModel', 'rootModel'],
+    methods: {
+      runRule: function runRule(parent) {
+        // Avoid using this.parentModel to not get dependent on it.
+        // Passed as an argument for workaround
+        (0, _params.pushParams)();
+        var rawOutput = this.rule.call(this.rootModel, this.model, parent);
+        var output = isPromise(rawOutput) ? makePendingAsyncVm(Vue, rawOutput) : rawOutput;
+
+        var rawParams = (0, _params.popParams)();
+        var params = rawParams && rawParams.$sub ? rawParams.$sub.length > 1 ? rawParams : rawParams.$sub[0] : null;
+
+        return { output: output, params: params };
+      }
+    },
+    computed: {
+      run: function run() {
+        var _this3 = this;
+
+        var parent = this.parentModel;
+        var isArrayDependant = Array.isArray(parent) && parent.__ob__;
+
+        if (isArrayDependant) {
+          // force depend on the array
+          var arrayDep = parent.__ob__.dep;
+          arrayDep.depend();
+
+          var target = arrayDep.constructor.target;
+
+          if (!this._indirectWatcher) {
+            var Watcher = target.constructor;
+            this._indirectWatcher = new Watcher(this.rootModel, function () {
+              return _this3.runRule(parent);
+            }, null, { lazy: true });
+          }
+
+          // if the update cause is only the array update
+          // and value stays the same, don't recalculate
+          if (!this._indirectWatcher.dirty && this._lastModel === this.model) {
+            this._indirectWatcher.depend();
+            return target.value;
+          }
+
+          this._lastModel = this.model;
+          this._indirectWatcher.evaluate();
+          this._indirectWatcher.depend();
+        }
+
+        return this._indirectWatcher ? this._indirectWatcher.value : this.runRule(parent);
+      },
+      $params: function $params() {
+        return this.run.params;
+      },
+      proxy: function proxy() {
+        var output = this.run.output;
+        if (output.__isVuelidateAsyncVm) {
+          return !!output.value;
+        }
+        return !!output;
+      },
+      $pending: function $pending() {
+        var output = this.run.output;
+        if (output.__isVuelidateAsyncVm) {
+          return output.pending;
+        }
+        return false;
+      }
+    },
+    render: function render(h) {
+      return null;
+    }
+  });
+
+  var Validation = Vue.extend({
+    data: function data() {
+      return {
+        dirty: false
+      };
+    },
+    mounted: function mounted() {
+      this._watcher.lazy = true;
+    },
+
+    props: ['validations', 'model', 'prop', 'parentModel', 'rootModel'],
+    methods: _extends({}, validationMethods, {
+      getRef: function getRef(key) {
+        this._watcher.depend();
+        if (this._watcher.dirty) {
+          this._watcher.evaluate();
+        }
+        return this.$refs[key];
+      },
+      isNested: function isNested(key) {
+        return typeof this.validations[key] !== 'function';
+      }
+    }),
+    computed: _extends({}, validationGetters, {
+      nestedKeys: function nestedKeys() {
+        return this.keys.filter(this.isNested);
+      },
+      ruleKeys: function ruleKeys() {
+        var _this4 = this;
+
+        return this.keys.filter(function (k) {
+          return !_this4.isNested(k);
+        });
+      },
+      keys: function keys() {
+        return Object.keys(this.validations);
+      },
+      proxy: function proxy() {
+        var _this5 = this;
+
+        var keyDefs = buildFromKeys(this.keys, function (key) {
+          return {
+            enumerable: true,
+            configurable: false,
+            get: function get() {
+              return _this5.getRef(key).proxy;
+            }
+          };
+        });
+
+        var getterDefs = buildFromKeys(getterNames, function (key) {
+          return {
+            enumerable: true,
+            configurable: false,
+            get: function get() {
+              return _this5[key];
+            }
+          };
+        });
+
+        var methodDefs = buildFromKeys(methodNames, function (key) {
+          return {
+            enumerable: false,
+            configurable: false,
+            get: function get() {
+              return _this5[key];
+            }
+          };
+        });
+
+        return Object.defineProperties({}, _extends({}, keyDefs, getterDefs, methodDefs));
+      }
+    }),
+    render: function render(h) {
+      var _this6 = this;
+
+      return h('div', [this.nestedKeys.map(function (key) {
+        return renderNested(h, _this6, key);
+      }), this.ruleKeys.map(function (key) {
+        return renderRule(h, _this6, key);
+      })]);
+    }
+  });
+
+  var GroupValidation = Validation.extend({
+    methods: {
+      isNested: function isNested(key) {
+        return typeof this.validations[key]() !== 'undefined';
+      },
+      getRef: function getRef(key) {
+        var vm = this;
+        return {
+          get proxy() {
+            // default to invalid
+            return vm.validations[key]() || false;
+          }
+        };
+      }
+    },
+    render: function render() {
+      return null;
+    }
+  });
+
+  var EachValidation = Validation.extend({
+    computed: {
+      keys: function keys() {
+        return Object.keys(this.model);
+      },
+      tracker: function tracker() {
+        var _this7 = this;
+
+        var trackBy = this.validations.$trackBy;
+        return trackBy ? function (key) {
+          return '' + getPath(_this7.rootModel, _this7.model[key], trackBy);
+        } : function (x) {
+          return '' + x;
+        };
+      }
+    },
+    methods: {
+      isNested: function isNested() {
+        return true;
+      },
+      getRef: function getRef(key) {
+        this._watcher.depend();
+        if (this._watcher.dirty) {
+          this._watcher.evaluate();
+        }
+        return this.$refs[this.tracker(key)];
+      }
+    },
+    render: function render(h) {
+      return h('div', renderEach(h, this));
+    }
+  });
+
+  var renderNested = function renderNested(h, vm, key) {
+    if (key === '$params') {
+      return null;
+    }
+    if (key === '$each') {
+      return h(EachValidation, {
+        key: key,
+        ref: key,
+        attrs: {
+          validations: vm.validations[key],
+          parentModel: vm.parentModel,
+          prop: key,
+          model: vm.model,
+          rootModel: vm.rootModel
+        }
+      });
+    }
+    var validations = vm.validations[key];
+    if (Array.isArray(validations)) {
+      var root = vm.rootModel;
+      var refVals = buildFromKeys(validations, function (path) {
+        return function () {
+          return getPath(root, root.$v, path);
+        };
+      }, function (v) {
+        return Array.isArray(v) ? v.join('.') : v;
+      });
+      return h(GroupValidation, {
+        key: key,
+        ref: key,
+        attrs: {
+          validations: refVals,
+          parentModel: null,
+          prop: key,
+          model: null,
+          rootModel: root
+        }
+      });
+    }
+    return h(Validation, {
+      key: key,
+      ref: key,
+      attrs: {
+        validations: validations,
+        parentModel: vm.model,
+        prop: key,
+        model: vm.model[key],
+        rootModel: vm.rootModel
+      }
+    });
+  };
+
+  var renderEach = function renderEach(h, vm) {
+    var def = vm.validations;
+
+    var validations = _extends({}, def);
+    delete validations['$trackBy'];
+
+    var usedTracks = {};
+
+    return vm.keys.map(function (key) {
+      var track = vm.tracker(key);
+      if (usedTracks.hasOwnProperty(track)) {
+        return null;
+      }
+      usedTracks[track] = true;
+      return h(Validation, {
+        key: track,
+        ref: track,
+        attrs: {
+          validations: validations,
+          prop: key,
+          parentModel: vm.model,
+          model: vm.model[key],
+          rootModel: vm.rootModel
+        } });
+    });
+  };
+
+  var renderRule = function renderRule(h, vm, key) {
+    return h(ValidationRule, { key: key,
+      ref: key,
+      attrs: {
+        rule: vm.validations[key],
+        parentModel: vm.parentModel,
+        model: vm.model,
+        rootModel: vm.rootModel
+      } });
+  };
+
+  _cachedComponent = Validation;
+  return _cachedComponent;
+};
+
+var _cachedVue = null;
+function getVue(rootVm) {
+  if (_cachedVue) return _cachedVue;
+  var Vue = rootVm.constructor;
+  /* istanbul ignore next */
+  while (Vue.super) {
+    Vue = Vue.super;
+  }_cachedVue = Vue;
+  return Vue;
+}
+
+var validateModel = function validateModel(model, validations) {
+  var Vue = getVue(model);
+  var Validation = getComponent(Vue);
+  var root = new Vue({
+    render: function render(h) {
+      var vals = typeof validations === 'function' ? validations.call(model) : validations;
+
+      return h(Validation, {
+        ref: '$v',
+        attrs: {
+          validations: vals,
+          parentModel: null,
+          prop: '$v',
+          model: model,
+          rootModel: model
+        }
+      });
+    }
+  });
+  root.$mount();
+  return root;
+};
+
+var validationMixin = {
+  beforeCreate: function beforeCreate() {
+    var _this8 = this;
+
+    var options = this.$options;
+    var vals = options.validations;
+    if (!vals) return;
+    if (!options.computed) options.computed = {};
+    options.computed.$v = function () {
+      return _this8._vuelidate.$refs.$v.proxy;
+    };
+  },
+  created: function created() {
+    var vals = this.$options.validations;
+    if (vals) {
+      this._vuelidate = validateModel(this, vals);
+    }
+  },
+  beforeDestroy: function beforeDestroy() {
+    if (this._vuelidate) {
+      this._vuelidate.$destroy();
+      this._vuelidate = null;
+    }
+  }
+};
+
+function Vuelidate(Vue) {
+  Vue.mixin(validationMixin);
+}
+
+exports.Vuelidate = Vuelidate;
+exports.validationMixin = validationMixin;
+exports.withParams = _params.withParams;
+exports.default = Vuelidate;
+},{"./params":15}],15:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+exports.pushParams = pushParams;
+exports.popParams = popParams;
+exports.withParams = withParams;
+
+var stack = [];
+
+// exported for tests
+var target = exports.target = null;
+var _setTarget = exports._setTarget = function _setTarget(x) {
+  exports.target = target = x;
+};
+
+function pushParams() {
+  if (target !== null) {
+    stack.push(target);
+  }
+  exports.target = target = {};
+}
+
+function popParams() {
+  var lastTarget = target;
+  var newTarget = exports.target = target = stack.pop() || null;
+  if (newTarget) {
+    if (!Array.isArray(newTarget.$sub)) {
+      newTarget.$sub = [];
+    }
+    newTarget.$sub.push(lastTarget);
+  }
+  return lastTarget;
+}
+
+function addParams(params) {
+  if (typeof params === 'object' && !Array.isArray(params)) {
+    exports.target = target = _extends({}, target, params);
+  } else {
+    throw new Error('params must be an object');
+  }
+}
+
+function withParamsDirect(params, validator) {
+  return withParamsClosure(function (add) {
+    return function () {
+      add(params);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return validator.apply(this, args);
+    };
+  });
+}
+
+function withParamsClosure(closure) {
+  var validator = closure(addParams);
+  return function () {
+    pushParams();
+    try {
+      for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+        args[_key2] = arguments[_key2];
+      }
+
+      return validator.apply(this, args);
+    } finally {
+      popParams();
+    }
+  };
+}
+
+function withParams(paramsOrClosure, maybeValidator) {
+  if (typeof paramsOrClosure === 'object' && maybeValidator !== undefined) {
+    return withParamsDirect(paramsOrClosure, maybeValidator);
+  }
+  return withParamsClosure(paramsOrClosure);
+}
+},{}],16:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = (0, _common.regex)('alpha', /^[a-zA-Z]*$/);
+},{"./common":20}],17:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = (0, _common.regex)('alphaNum', /^[a-zA-Z0-9]*$/);
+},{"./common":20}],18:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function () {
+  for (var _len = arguments.length, validators = Array(_len), _key = 0; _key < _len; _key++) {
+    validators[_key] = arguments[_key];
+  }
+
+  return (0, _common.withParams)({ type: 'and' }, function () {
+    var _this = this;
+
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return validators.length > 0 && validators.reduce(function (valid, fn) {
+      return valid && fn.apply(_this, args);
+    }, true);
+  });
+};
+},{"./common":20}],19:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (min, max) {
+  return (0, _common.withParams)({ type: 'between', min: min, max: max }, function (value) {
+    return !(0, _common.req)(value) || !/\s/.test(value) && +min <= +value && +max >= +value;
+  });
+};
+},{"./common":20}],20:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.regex = exports.ref = exports.len = exports.req = exports.withParams = undefined;
+
+var _withParams = require('../withParams');
+
+var _withParams2 = _interopRequireDefault(_withParams);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.withParams = _withParams2.default;
+
+// "required" core, used in almost every validator to allow empty values
+
+var req = exports.req = function req(value) {
+  if (Array.isArray(value)) return !!value.length;
+  if (value === undefined || value === null) {
+    return false;
+  }
+
+  if (typeof value === 'object') {
+    for (var _ in value) {
+      return true;
+    }return false;
+  }
+
+  return !!String(value).length;
+};
+
+// get length in type-agnostic way
+var len = exports.len = function len(value) {
+  if (Array.isArray(value)) return value.length;
+  if (typeof value === 'object') {
+    return Object.keys(value).length;
+  }
+  return String(value).length;
+};
+
+// resolve referenced value
+var ref = exports.ref = function ref(reference, vm, parentVm) {
+  return typeof reference === 'function' ? reference.call(vm, parentVm) : parentVm[reference];
+};
+
+// regex based validator template
+var regex = exports.regex = function regex(type, expr) {
+  return (0, _withParams2.default)({ type: type }, function (value) {
+    return !req(value) || expr.test(value);
+  });
+};
+},{"../withParams":32}],21:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+var emailRegex = /(^$|^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$)/;
+
+exports.default = (0, _common.regex)('email', emailRegex);
+},{"./common":20}],22:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.and = exports.or = exports.url = exports.sameAs = exports.requiredUnless = exports.requiredIf = exports.required = exports.minLength = exports.maxLength = exports.email = exports.between = exports.numeric = exports.alphaNum = exports.alpha = undefined;
+
+var _alpha = require('./alpha');
+
+var _alpha2 = _interopRequireDefault(_alpha);
+
+var _alphaNum = require('./alphaNum');
+
+var _alphaNum2 = _interopRequireDefault(_alphaNum);
+
+var _numeric = require('./numeric');
+
+var _numeric2 = _interopRequireDefault(_numeric);
+
+var _between = require('./between');
+
+var _between2 = _interopRequireDefault(_between);
+
+var _email = require('./email');
+
+var _email2 = _interopRequireDefault(_email);
+
+var _maxLength = require('./maxLength');
+
+var _maxLength2 = _interopRequireDefault(_maxLength);
+
+var _minLength = require('./minLength');
+
+var _minLength2 = _interopRequireDefault(_minLength);
+
+var _required = require('./required');
+
+var _required2 = _interopRequireDefault(_required);
+
+var _requiredIf = require('./requiredIf');
+
+var _requiredIf2 = _interopRequireDefault(_requiredIf);
+
+var _requiredUnless = require('./requiredUnless');
+
+var _requiredUnless2 = _interopRequireDefault(_requiredUnless);
+
+var _sameAs = require('./sameAs');
+
+var _sameAs2 = _interopRequireDefault(_sameAs);
+
+var _url = require('./url');
+
+var _url2 = _interopRequireDefault(_url);
+
+var _or = require('./or');
+
+var _or2 = _interopRequireDefault(_or);
+
+var _and = require('./and');
+
+var _and2 = _interopRequireDefault(_and);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.alpha = _alpha2.default;
+exports.alphaNum = _alphaNum2.default;
+exports.numeric = _numeric2.default;
+exports.between = _between2.default;
+exports.email = _email2.default;
+exports.maxLength = _maxLength2.default;
+exports.minLength = _minLength2.default;
+exports.required = _required2.default;
+exports.requiredIf = _requiredIf2.default;
+exports.requiredUnless = _requiredUnless2.default;
+exports.sameAs = _sameAs2.default;
+exports.url = _url2.default;
+exports.or = _or2.default;
+exports.and = _and2.default;
+},{"./alpha":16,"./alphaNum":17,"./and":18,"./between":19,"./email":21,"./maxLength":23,"./minLength":24,"./numeric":25,"./or":26,"./required":27,"./requiredIf":28,"./requiredUnless":29,"./sameAs":30,"./url":31}],23:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (length) {
+  return (0, _common.withParams)({ type: 'maxLength', max: length }, function (value) {
+    return !(0, _common.req)(value) || (0, _common.len)(value) <= length;
+  });
+};
+},{"./common":20}],24:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (length) {
+  return (0, _common.withParams)({ type: 'minLength', min: length }, function (value) {
+    return !(0, _common.req)(value) || (0, _common.len)(value) >= length;
+  });
+};
+},{"./common":20}],25:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = (0, _common.regex)('numeric', /^[0-9]*$/);
+},{"./common":20}],26:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function () {
+  for (var _len = arguments.length, validators = Array(_len), _key = 0; _key < _len; _key++) {
+    validators[_key] = arguments[_key];
+  }
+
+  return (0, _common.withParams)({ type: 'or' }, function () {
+    var _this = this;
+
+    for (var _len2 = arguments.length, args = Array(_len2), _key2 = 0; _key2 < _len2; _key2++) {
+      args[_key2] = arguments[_key2];
+    }
+
+    return validators.length > 0 && validators.reduce(function (valid, fn) {
+      return valid || fn.apply(_this, args);
+    }, false);
+  });
+};
+},{"./common":20}],27:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = (0, _common.withParams)({ type: 'required' }, _common.req);
+},{"./common":20}],28:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (prop) {
+  return (0, _common.withParams)({ type: 'requiredIf', prop: prop }, function (value, parentVm) {
+    return (0, _common.ref)(prop, this, parentVm) ? (0, _common.req)(value) : true;
+  });
+};
+},{"./common":20}],29:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (prop) {
+  return (0, _common.withParams)({ type: 'requiredUnless', prop: prop }, function (value, parentVm) {
+    return !(0, _common.ref)(prop, this, parentVm) ? (0, _common.req)(value) : true;
+  });
+};
+},{"./common":20}],30:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+exports.default = function (equalTo) {
+  return (0, _common.withParams)({ type: 'sameAs', eq: equalTo }, function (value, parentVm) {
+    return value === (0, _common.ref)(equalTo, this, parentVm);
+  });
+};
+},{"./common":20}],31:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _common = require('./common');
+
+var urlRegex = /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]-*)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:[/?#]\S*)?$/;
+
+exports.default = (0, _common.regex)('url', urlRegex);
+},{"./common":20}],32:[function(require,module,exports){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+/* istanbul ignore next */
+var withParams = 'lib' === 'web' ? require('./withParamsBrowser').withParams : require('./params').withParams;
+
+exports.default = withParams;
+},{"./params":15,"./withParamsBrowser":33}],33:[function(require,module,exports){
+(function (global){
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+// In browser, validators should be independent from Vuelidate.
+// The only usecase those do need to be dependent is when you need $params.
+// To make the dependency optional, try to grab Vuelidate from global object,
+// fallback to stubbed WithParams on failure.
+
+var root = typeof global !== 'undefined' ? global : typeof window !== 'undefined' ? window : {};
+
+/* istanbul ignore next */
+var fakeWithParams = function fakeWithParams(paramsOrClosure, maybeValidator) {
+  if (typeof paramsOrClosure === 'object' && maybeValidator !== undefined) {
+    return maybeValidator;
+  }
+  return paramsOrClosure(function () {});
+};
+
+var withParams = exports.withParams = root.vuelidate ? root.vuelidate.withParams : fakeWithParams;
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}]},{},[2]);

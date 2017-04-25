@@ -45,7 +45,7 @@ var db = function () {
           if (err) console.log("Database already created");else console.log("Created new database");
           callback(null, connection);
         });
-      }, _tables.createTableServices, _tables.createTableProjects, _tables.createTableProfile], function (err, data) {
+      }, _tables.createTableServices, _tables.createTableProjects, _tables.createTableProfile, _tables.createTableContact], function (err, data) {
         console.log("connection done");
       });
     }

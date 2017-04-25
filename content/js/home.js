@@ -5,6 +5,9 @@
 
 import Vue from 'vue'
 import App from './appHome.vue'
+import Vuelidate from 'vuelidate'
+
+Vue.use(Vuelidate)
 
 new Vue({
   el: '#app',

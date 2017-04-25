@@ -59,6 +59,14 @@ var tables = function () {
         callback(null, connection);
       });
     }
+  }, {
+    key: 'createTableContact',
+    value: function createTableContact(connection, callback) {
+      _rethinkdb2.default.db(_config2.default.db_name).tableCreate('contact').run(connection, function (err, result) {
+        if (err) console.log("tabla contact already created");else console.log("created new table contact");
+        callback(null, connection);
+      });
+    }
   }]);
 
   return tables;

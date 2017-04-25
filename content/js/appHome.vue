@@ -1,5 +1,5 @@
 <template lang="html">
-  <div class="">
+  <div class="wm-b-70">
     <about  :profile="profile"></about>
     <projects :projects="projects"></projects>
     <services :services="services"></services>

@@ -7,7 +7,7 @@
             <h3 CLASS="teal-text text-darken-2">PROJECT MANAGEMENT</h3>
             <p class="center rem-2">Planeación, Ejecución, Seguimiento y Resultados.</p>
             <p class="left-align light">Para poder desarrollar un producto digital como lo es un portal web, un blog una aplicacion  movil, es necesario tener establecidos y claros los objetivos que se quieren cumplir y las métricas que se quieren alcanzar</p>
-            <p class="rem-1-5 left-align"><strong>¿Cómo lo puedo ayudar con sus proyectos web?</strong></p>
+            <p class="rem-1-5 left-align center-xs"><strong>¿Cómo lo puedo ayudar con sus proyectos web?</strong></p>
             <p class="left-align light ">Si no sabe por donde empezar a desarrollar su proyecto, yo puedo darle una asesoría por donde debe comenzar, juntos lograremos un gran equipo y podras desarrollar tu idea.</p>
             <p class="left-align light ">1. Definicion del proyecto: En esta etapa se deben considerar los objetivos, el alcanza y el tiempo en el que el proyecto debe estar al aire.</p>
             <p class="left-align light">2. Análisis de requisitos: ¿Qué es lo que se necesita para desarrollar el proyecto? herramientas, software, plantillas, licencias, hostings, servidores etc. </p>

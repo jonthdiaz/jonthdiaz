@@ -153,8 +153,8 @@ gulp.task('wes6', function() {
 gulp.task('wsass', function() {
   gulp.watch(paths.sass, ['sass']);
 });
-gulp.task('dev', ['sass', 'build_js'],function() {
-  gulp.watch(paths.sass, ['sass']);
+gulp.task('dev', ['sass', 'build_js', 'wsass'],function() {
+
 });
 
 // gulp.task('watch', ()=>{return compile(true);})

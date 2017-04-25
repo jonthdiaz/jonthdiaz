@@ -58,6 +58,9 @@
       padding-bottom: 0px + $i
     &-l-#{$i}
       padding-left: 0px + $i
+    &-l-imp-#{$i}
+      padding-left: 0px + $i !important
+
 
 .br
   @for $i from 0 through 100
@@ -89,6 +92,14 @@
         &-s-#{$i}-#{$j}
           $size: $i + unquote('.') + $j + rem
           padding: $size
+
+.wmp
+  @for $i from 0 through 100
+    &-#{$i}
+      width: $i + %
+    @media (max-width: 600px)
+      &-xs-#{$i}
+        width: $i + %
 
 .pr
   @for $i from 0 through 100
@@ -269,6 +280,8 @@
   @for $i from 0 through 500
     &-#{$i}
       height: 0px + $i
+    &-imp-#{$i}
+      height: 0px + $i !important
 
 .bottom
   @for $i from 0 through 500
@@ -278,8 +291,6 @@
       bottom: 0px + $i !important
     &-#{$i}-less
       bottom: 0px - $i
-
-
 .wf
   &-right
     float: right
@@ -309,3 +320,7 @@
 
 .wm-0-imp
   margin: 0px !important
+
+.center-xs
+  @media (max-width: 600px)
+    text-align: center
